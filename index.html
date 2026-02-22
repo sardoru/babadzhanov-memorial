@@ -779,6 +779,7 @@ a:hover { color: var(--highlight); }
       <button onclick="setLang('en')" data-lang="en" class="active">EN</button>
       <button onclick="setLang('ru')" data-lang="ru">RU</button>
       <button onclick="setLang('uz')" data-lang="uz">UZ</button>
+      <button onclick="setLang('es')" data-lang="es">ES</button>
     </div>
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle light/dark mode">
       <div class="toggle-knob"></div>
@@ -1063,347 +1064,398 @@ a:hover { color: var(--highlight); }
 // ===== TRANSLATIONS =====
 const T = {
   // Nav
-  nav_home: { en: 'Home', ru: 'Главная', uz: 'Bosh sahifa' },
-  nav_bio: { en: 'Biography', ru: 'Биография', uz: 'Tarjimayi hol' },
-  nav_legacy: { en: 'Legacy', ru: 'Наследие', uz: 'Meros' },
-  nav_ikan: { en: 'Ikan', ru: 'Икан', uz: 'Ikon' },
-  nav_seri: { en: 'Sericulture', ru: 'Шелководство', uz: 'Ipakchilik' },
-  nav_compare: { en: 'Then & Now', ru: 'Тогда и сейчас', uz: 'O\'sha va hozir' },
-  nav_gallery: { en: 'Gallery', ru: 'Галерея', uz: 'Galereya' },
-  nav_family: { en: 'Family', ru: 'Семья', uz: 'Oila' },
+  nav_home: { en: 'Home', ru: 'Главная', uz: 'Bosh sahifa', es: 'Inicio' },
+  nav_bio: { en: 'Biography', ru: 'Биография', uz: 'Tarjimayi hol', es: 'Biografía' },
+  nav_legacy: { en: 'Legacy', ru: 'Наследие', uz: 'Meros', es: 'Legado' },
+  nav_ikan: { en: 'Ikan', ru: 'Икан', uz: 'Ikon', es: 'Ikán' },
+  nav_seri: { en: 'Sericulture', ru: 'Шелководство', uz: 'Ipakchilik', es: 'Sericultura' },
+  nav_compare: { en: 'Then & Now', ru: 'Тогда и сейчас', uz: 'O\'sha va hozir', es: 'Antes y ahora' },
+  nav_gallery: { en: 'Gallery', ru: 'Галерея', uz: 'Galereya', es: 'Galería' },
+  nav_family: { en: 'Family', ru: 'Семья', uz: 'Oila', es: 'Familia' },
 
   // Hero
-  hero_dates: { en: 'Ikan · Turkestan', ru: 'Икан · Туркестан', uz: 'Ikon · Turkiston · ' },
+  hero_dates: { en: 'Ikan · Turkestan', ru: 'Икан · Туркестан', uz: 'Ikon · Turkiston · ', es: 'Ikán · Turkestán' },
   hero_epithet_html: {
     en: 'Orphan. Scholar. Rector. Scientist of Silk. Father of Seven.<br><em>From a peasant village to the rector\'s chair — built on knowledge, not connections</em>',
     ru: 'Сирота. Учёный. Ректор. Исследователь шёлка. Отец семерых дочерей.<br><em>От крестьянского села до кресла ректора — на силе знаний, а не связей</em>',
-    uz: 'Yetim. Olim. Rektor. Ipak tadqiqotchisi. Yetti qizning otasi.<br><em>Dehqon qishlog\'idan rektor kursisigacha — bilim kuchi bilan, tanishlik bilan emas</em>'
+    uz: 'Yetim. Olim. Rektor. Ipak tadqiqotchisi. Yetti qizning otasi.<br><em>Dehqon qishlog\'idan rektor kursisigacha — bilim kuchi bilan, tanishlik bilan emas</em>',
+    es: 'Huérfano. Académico. Rector. Científico de la seda. Padre de siete hijas.<br><em>De una aldea campesina a la rectoría — construido con conocimiento, no con conexiones</em>'
   },
 
   // Biography
-  bio_title: { en: 'Biography · Биография', ru: 'Биография', uz: 'Tarjimayi hol' },
+  bio_title: { en: 'Biography · Биография', ru: 'Биография', uz: 'Tarjimayi hol', es: 'Biografía' },
   bio_p1_html: {
     en: 'Гулом Бобожонов was born in <strong>1907</strong> in the village of <strong>Ikan</strong> (Иқон), near the ancient city of Turkestan, into a peasant (<em>dehqon</em>) family. His father died when Gulom was just <strong>one year old</strong>. He was raised by his <strong>grandfather until the age of eight</strong>, and then by his <strong>mother until the age of eleven</strong>.',
     ru: 'Гулом Бобожонов родился в <strong>1907</strong> году в селе <strong>Икан</strong> (Иқон) близ древнего города Туркестан на территории нынешнего Южного Казахстана в крестьянской (<em>дехканской</em>) семье. Его отец умер, когда Гулому был всего <strong>один год</strong>. До <strong>восьми лет</strong> его воспитывал <strong>дедушка</strong>, а затем до <strong>одиннадцати лет — мать</strong>.',
-    uz: 'Гулом Бобожонов <strong>1907</strong>-yilda hozirgi dagi qadimiy Turkiston shahri yaqinidagi <strong>Ikon</strong> (Иқон) qishlog\'ida dehqon oilasida tug\'ilgan. Otasi Gulom endigina <strong>bir yoshda</strong> bo\'lganida vafot etgan. Uni <strong>sakkiz yoshigacha bobosi</strong>, so\'ngra <strong>o\'n bir yoshigacha onasi</strong> tarbiyalagan.'
+    uz: 'Гулом Бобожонов <strong>1907</strong>-yilda hozirgi dagi qadimiy Turkiston shahri yaqinidagi <strong>Ikon</strong> (Иқон) qishlog\'ida dehqon oilasida tug\'ilgan. Otasi Gulom endigina <strong>bir yoshda</strong> bo\'lganida vafot etgan. Uni <strong>sakkiz yoshigacha bobosi</strong>, so\'ngra <strong>o\'n bir yoshigacha onasi</strong> tarbiyalagan.',
+    es: 'Гулом Бобожонов nació en <strong>1907</strong> en la aldea de <strong>Ikán</strong> (Иқон), cerca de la antigua ciudad de Turkestán, en una familia campesina (<em>dehqon</em>). Su padre murió cuando Gulom tenía apenas <strong>un año</strong>. Fue criado por su <strong>abuelo hasta los ocho años</strong>, y luego por su <strong>madre hasta los once</strong>.'
   },
   bio_quote1: {
     en: 'An orphan at one. Working the fields at eleven. A student in Tashkent at fifteen. A rector by the force of knowledge alone.',
     ru: 'Сирота в один год. В поле с одиннадцати. Студент в Ташкенте в пятнадцать. Ректор — силой одного лишь знания.',
-    uz: 'Bir yoshida yetim. O\'n birida dalada ishchi. O\'n beshida Toshkentda talaba. Faqat bilim kuchi bilan rektor.'
+    uz: 'Bir yoshida yetim. O\'n birida dalada ishchi. O\'n beshida Toshkentda talaba. Faqat bilim kuchi bilan rektor.',
+    es: 'Huérfano al año. Trabajando en el campo a los once. Estudiante en Taskent a los quince. Rector por la fuerza del conocimiento.'
   },
   bio_p2_html: {
     en: 'From <strong>1918</strong>, at the age of eleven, the young Gulom began working to survive — tending other people\'s livestock, helping with planting and harvest. During the winter months, he attended a <strong>newly established school</strong> in the village, part of the early Soviet campaign to bring literacy to Central Asian communities.',
     ru: 'С <strong>1918</strong> года, в возрасте одиннадцати лет, юный Гулом начал работать, чтобы выжить — пас чужой скот, помогал с посевом и уборкой урожая. В зимние месяцы он посещал <strong>новую школу</strong>, открытую в селе в рамках ранней советской кампании по ликвидации безграмотности в Средней Азии.',
-    uz: '<strong>1918</strong>-yildan boshlab, o\'n bir yoshida yosh Gulom tirikchilik uchun ishlashga tushdi — begona odamlarning mollarini boqdi, ekin va o\'rim-yig\'im ishlariga yordam berdi. Qish oylarida u qishloqda <strong>yangi ochilgan maktab</strong>ga qatnadi — bu Sovet hokimiyatining Markaziy Osiyoda savodxonlikni tarqatish dasturining bir qismi edi.'
+    uz: '<strong>1918</strong>-yildan boshlab, o\'n bir yoshida yosh Gulom tirikchilik uchun ishlashga tushdi — begona odamlarning mollarini boqdi, ekin va o\'rim-yig\'im ishlariga yordam berdi. Qish oylarida u qishloqda <strong>yangi ochilgan maktab</strong>ga qatnadi — bu Sovet hokimiyatining Markaziy Osiyoda savodxonlikni tarqatish dasturining bir qismi edi.',
+    es: 'A partir de <strong>1918</strong>, a los once años, el joven Gulom comenzó a trabajar para sobrevivir — cuidando ganado ajeno, ayudando con la siembra y la cosecha. Durante los meses de invierno, asistía a una <strong>escuela recién fundada</strong> en la aldea, parte de la campaña soviética temprana para llevar la alfabetización a las comunidades de Asia Central.'
   },
   bio_p3_html: {
     en: 'In <strong>1922</strong>, at just fifteen years old, Bobojonov made the journey to <strong>Tashkent</strong> — the capital of Soviet Turkestan — and enrolled in the preparatory department of the <strong>Men\'s Institute of Education</strong> (Институт просвещения). He graduated in <strong>1928</strong> after six years of study, transforming himself from a self-taught farmhand into a trained specialist. That same year he proceeded to <strong>Samarkand</strong> for advanced studies.',
     ru: 'В <strong>1922</strong> году, в возрасте всего пятнадцати лет, Бобожонов отправился в <strong>Ташкент</strong> — столицу Советского Туркестана — и поступил на подготовительное отделение <strong>Мужского института просвещения</strong>. Он окончил его в <strong>1928</strong> году после шести лет учёбы, превратившись из самоучки-батрака в подготовленного специалиста. В том же году он отправился в <strong>Самарканд</strong> для продолжения образования.',
-    uz: '<strong>1922</strong>-yilda, endigina o\'n besh yoshida, Bobojonov <strong>Toshkent</strong>ga — Sovet Turkistonining poytaxtiga — yo\'l oldi va <strong>Erkaklar ma\'rifat instituti</strong>ning tayyorlov bo\'limiga o\'qishga kirdi. U <strong>1928</strong>-yilda olti yillik o\'qishdan so\'ng bitirdi va o\'z-o\'zini o\'qitgan dehqon yigitdan malakali mutaxassisga aylandi. O\'sha yili u <strong>Samarqand</strong>ga oliy ta\'lim olish uchun jo\'nab ketdi.'
+    uz: '<strong>1922</strong>-yilda, endigina o\'n besh yoshida, Bobojonov <strong>Toshkent</strong>ga — Sovet Turkistonining poytaxtiga — yo\'l oldi va <strong>Erkaklar ma\'rifat instituti</strong>ning tayyorlov bo\'limiga o\'qishga kirdi. U <strong>1928</strong>-yilda olti yillik o\'qishdan so\'ng bitirdi va o\'z-o\'zini o\'qitgan dehqon yigitdan malakali mutaxassisga aylandi. O\'sha yili u <strong>Samarqand</strong>ga oliy ta\'lim olish uchun jo\'nab ketdi.',
+    es: 'En <strong>1922</strong>, con apenas quince años, Bobojonov emprendió el viaje a <strong>Taskent</strong> — la capital del Turkestán soviético — y se matriculó en el departamento preparatorio del <strong>Instituto Masculino de Educación</strong> (Институт просвещения). Se graduó en <strong>1928</strong> tras seis años de estudio, transformándose de un jornalero autodidacta en un especialista formado. Ese mismo año partió a <strong>Samarcanda</strong> para estudios avanzados.'
   },
   bio_p4_html: {
     en: 'His life trajectory embodied the Soviet-era ideal of the <em>scholar-administrator</em> — where intellectual achievement, not party connections, was the engine of advancement:',
     ru: 'Его жизненный путь воплотил советский идеал <em>учёного-руководителя</em> — когда двигателем карьеры были интеллектуальные достижения, а не партийные связи:',
-    uz: 'Uning hayot yo\'li sovet davrining <em>olim-rahbar</em> idealini namoyon etdi — bu yerda martaba harakatlantiruvchisi partiyaviy aloqalar emas, balki ilmiy yutuqlar edi:'
+    uz: 'Uning hayot yo\'li sovet davrining <em>olim-rahbar</em> idealini namoyon etdi — bu yerda martaba harakatlantiruvchisi partiyaviy aloqalar emas, balki ilmiy yutuqlar edi:',
+    es: 'La trayectoria de su vida encarnó el ideal soviético del <em>académico-administrador</em> — donde el logro intelectual, no las conexiones partidistas, era el motor del ascenso:'
   },
 
   // Timeline
-  tl_1907_label: { en: '1907 — Born in Ikan', ru: '1907 — Рождение в Икане', uz: '1907 — Ikonda tug\'ilish' },
+  tl_1907_label: { en: '1907 — Born in Ikan', ru: '1907 — Рождение в Икане', uz: '1907 — Ikonda tug\'ilish', es: '1907 — Nacimiento en Ikán' },
   tl_1907_desc: {
     en: 'Born into a peasant family. Father dies when Gulom is one year old. Raised by grandfather, then mother.',
     ru: 'Родился в крестьянской семье. Отец умер, когда Гулому был один год. Воспитывался дедом, затем матерью.',
-    uz: 'Dehqon oilasida tug\'ildi. Otasi Gulom bir yoshida vafot etdi. Bobosi, keyin onasi tarbiyaladi.'
+    uz: 'Dehqon oilasida tug\'ildi. Otasi Gulom bir yoshida vafot etdi. Bobosi, keyin onasi tarbiyaladi.',
+    es: 'Nació en una familia campesina. Su padre muere cuando Gulom tiene un año. Criado por su abuelo, luego por su madre.'
   },
-  tl_1918_label: { en: '1918 — Age 11', ru: '1918 — 11 лет', uz: '1918 — 11 yoshida' },
+  tl_1918_label: { en: '1918 — Age 11', ru: '1918 — 11 лет', uz: '1918 — 11 yoshida', es: '1918 — 11 años' },
   tl_1918_desc: {
     en: 'Begins working — tending livestock, farming for others. Studies in winter at a newly established village school.',
     ru: 'Начинает работать — пасёт скот, батрачит. Зимой учится в новой сельской школе.',
-    uz: 'Ishlashni boshlaydi — mol boqadi, boshqalarga dehqonchilik qiladi. Qishda yangi ochilgan qishloq maktabida o\'qiydi.'
+    uz: 'Ishlashni boshlaydi — mol boqadi, boshqalarga dehqonchilik qiladi. Qishda yangi ochilgan qishloq maktabida o\'qiydi.',
+    es: 'Comienza a trabajar — cuidando ganado, cultivando para otros. Estudia en invierno en una escuela rural recién fundada.'
   },
-  tl_1922_label: { en: '1922 — Age 15, Tashkent', ru: '1922 — 15 лет, Ташкент', uz: '1922 — 15 yoshida, Toshkent' },
+  tl_1922_label: { en: '1922 — Age 15, Tashkent', ru: '1922 — 15 лет, Ташкент', uz: '1922 — 15 yoshida, Toshkent', es: '1922 — 15 años, Taskent' },
   tl_1922_desc: {
     en: 'Travels to Tashkent alone. Enters the Men\'s Institute of Education (preparatory department).',
     ru: 'В одиночку едет в Ташкент. Поступает на подготовительное отделение Мужского института просвещения.',
-    uz: 'Yolg\'iz Toshkentga yo\'l oladi. Erkaklar ma\'rifat institutining tayyorlov bo\'limiga kiradi.'
+    uz: 'Yolg\'iz Toshkentga yo\'l oladi. Erkaklar ma\'rifat institutining tayyorlov bo\'limiga kiradi.',
+    es: 'Viaja solo a Taskent. Ingresa al departamento preparatorio del Instituto Masculino de Educación.'
   },
-  tl_1928_label: { en: '1928 — Graduation & Samarkand', ru: '1928 — Выпуск и Самарканд', uz: '1928 — Bitirish va Samarqand' },
+  tl_1928_label: { en: '1928 — Graduation & Samarkand', ru: '1928 — Выпуск и Самарканд', uz: '1928 — Bitirish va Samarqand', es: '1928 — Graduación y Samarcanda' },
   tl_1928_desc: {
     en: 'Completes six years of study in Tashkent. Proceeds to Samarkand for advanced education.',
     ru: 'Завершает шесть лет учёбы в Ташкенте. Едет в Самарканд для продолжения образования.',
-    uz: 'Toshkentda olti yillik o\'qishni tugatadi. Oliy ta\'lim uchun Samarqandga ketadi.'
+    uz: 'Toshkentda olti yillik o\'qishni tugatadi. Oliy ta\'lim uchun Samarqandga ketadi.',
+    es: 'Completa seis años de estudio en Taskent. Parte a Samarcanda para educación avanzada.'
   },
-  tl_science_label: { en: 'Scientific Career', ru: 'Научная карьера', uz: 'Ilmiy faoliyat' },
+  tl_science_label: { en: 'Scientific Career', ru: 'Научная карьера', uz: 'Ilmiy faoliyat', es: 'Carrera científica' },
   tl_science_desc: {
     en: 'Specializes in sericulture — silkworm breeding and mulberry cultivation. Defends dissertation, rises through academic ranks.',
     ru: 'Специализируется на шелководстве — разведении тутового шелкопряда и выращивании тутовника. Защищает диссертацию, продвигается по научной лестнице.',
-    uz: 'Ipakchilikka ixtisoslashadi — ipak qurti yetishtirish va tut daraxti parvarishi. Dissertatsiya himoya qiladi, ilmiy martabada ko\'tariladi.'
+    uz: 'Ipakchilikka ixtisoslashadi — ipak qurti yetishtirish va tut daraxti parvarishi. Dissertatsiya himoya qiladi, ilmiy martabada ko\'tariladi.',
+    es: 'Se especializa en sericultura — cría de gusanos de seda y cultivo de moreras. Defiende su disertación, asciende en los rangos académicos.'
   },
-  tl_rector_label: { en: 'Director — Tashkent', ru: 'Директор — Ташкент', uz: 'Direktor — Toshkent' },
+  tl_rector_label: { en: 'Director — Tashkent', ru: 'Директор — Ташкент', uz: 'Direktor — Toshkent', es: 'Director — Taskent' },
   tl_rector_desc: {
     en: 'Appointed Director of the Agricultural Institute in Tashkent — the pinnacle of academic leadership, achieved through decades of scholarly work.',
     ru: 'Назначен директором Сельскохозяйственного института в Ташкенте — вершина академического руководства, достигнутая десятилетиями научной работы.',
-    uz: 'Toshkentdagi Qishloq xo\'jaligi institutining direktori etib tayinlandi — o\'nlab yillik ilmiy mehnat bilan erishilgan akademik rahbarlikning cho\'qqisi.'
+    uz: 'Toshkentdagi Qishloq xo\'jaligi institutining direktori etib tayinlandi — o\'nlab yillik ilmiy mehnat bilan erishilgan akademik rahbarlikning cho\'qqisi.',
+    es: 'Nombrado Director del Instituto Agrícola de Taskent — la cúspide del liderazgo académico, alcanzada tras décadas de trabajo científico.'
   },
-  tl_war_label: { en: '1941–1945 — War Effort', ru: '1941–1945 — Военные годы', uz: '1941–1945 — Urush yillari' },
+  tl_war_label: { en: '1941–1945 — War Effort', ru: '1941–1945 — Военные годы', uz: '1941–1945 — Urush yillari', es: '1941–1945 — Esfuerzo bélico' },
   tl_war_desc: {
     en: 'During World War II, directed production of parachutes from pure silk (mulberry silkworm) for the Soviet defense. Both grandfathers — Gulam and Amin — served in the highest strategic echelon of the country\'s war effort.',
     ru: 'Во время Великой Отечественной войны руководил производством парашютов из чистого шёлка (тутового шелкопряда) для обороны страны. Оба деда — Гулям и Амин — работали в высшем стратегическом эшелоне военных усилий.',
-    uz: 'Ikkinchi Jahon urushi davrida mamlakat mudofaasi uchun toza ipakdan (tut ipak qurti) parashyutlar ishlab chiqarishni boshqardi. Har ikkala bobo — G\'ulom va Amin — mamlakatning oliy strategik eshelonida xizmat qildi.'
+    uz: 'Ikkinchi Jahon urushi davrida mamlakat mudofaasi uchun toza ipakdan (tut ipak qurti) parashyutlar ishlab chiqarishni boshqardi. Har ikkala bobo — G\'ulom va Amin — mamlakatning oliy strategik eshelonida xizmat qildi.',
+    es: 'Durante la Segunda Guerra Mundial, dirigió la producción de paracaídas de seda pura (gusano de seda de morera) para la defensa soviética. Ambos abuelos — Gulam y Amín — sirvieron en el escalón estratégico más alto del esfuerzo bélico del país.'
   },
-  tl_death_label: { en: '21 May 1955', ru: '21 мая 1955', uz: '1955-yil 21-may' },
+  tl_death_label: { en: '21 May 1955', ru: '21 мая 1955', uz: '1955-yil 21-may', es: '21 de mayo de 1955' },
   tl_death_desc: {
     en: 'Passed away at the age of 47–48, leaving behind his wife Habiba, seven young daughters, and an enduring legacy in sericulture science and agricultural education.',
     ru: 'Скончался в возрасте 47–48 лет, оставив жену Хабибу, семерых юных дочерей и непреходящее наследие в науке шелководства и сельскохозяйственном образовании.',
-    uz: '47–48 yoshida vafot etdi, rafiqasi Habiba, yetti yosh qizi va ipakchilik ilmi hamda qishloq xo\'jaligi ta\'limida boy merosini qoldirdi.'
+    uz: '47–48 yoshida vafot etdi, rafiqasi Habiba, yetti yosh qizi va ipakchilik ilmi hamda qishloq xo\'jaligi ta\'limida boy merosini qoldirdi.',
+    es: 'Falleció a los 47–48 años, dejando a su esposa Habiba, siete hijas jóvenes y un legado perdurable en la ciencia de la sericultura y la educación agrícola.'
   },
 
   // Scientific Legacy
-  legacy_title: { en: 'Scientific Legacy · Научное наследие', ru: 'Научное наследие', uz: 'Ilmiy meros' },
+  legacy_title: { en: 'Scientific Legacy · Научное наследие', ru: 'Научное наследие', uz: 'Ilmiy meros', es: 'Legado científico' },
   legacy_p1_html: {
     en: 'Bobojonov\'s primary scientific contribution lay in <strong>sericulture</strong> (шелководство) — the cultivation of silkworms (<em>Bombyx mori</em>) and the management of mulberry (<em>Morus</em>) plantations that sustained them. His work was not merely academic; it was the scientific backbone of a regional industry stretching back centuries.',
     ru: 'Основной научный вклад Бобожонова был в области <strong>шелководства</strong> — разведения тутового шелкопряда (<em>Bombyx mori</em>) и управления тутовыми (<em>Morus</em>) плантациями. Его работа была не просто академической — она составляла научную основу региональной отрасли с многовековой историей.',
-    uz: 'Bobojonovning asosiy ilmiy hissasi <strong>ipakchilik</strong> sohasida bo\'ldi — ipak qurti (<em>Bombyx mori</em>) yetishtirish va tut (<em>Morus</em>) plantatsiyalarini boshqarish. Uning ishi faqat akademik emas, balki asrlar davomida shakllangan mintaqaviy sanoatning ilmiy asosi edi.'
+    uz: 'Bobojonovning asosiy ilmiy hissasi <strong>ipakchilik</strong> sohasida bo\'ldi — ipak qurti (<em>Bombyx mori</em>) yetishtirish va tut (<em>Morus</em>) plantatsiyalarini boshqarish. Uning ishi faqat akademik emas, balki asrlar davomida shakllangan mintaqaviy sanoatning ilmiy asosi edi.',
+    es: 'La principal contribución científica de Bobojonov fue en la <strong>sericultura</strong> (шелководство) — el cultivo de gusanos de seda (<em>Bombyx mori</em>) y la gestión de plantaciones de morera (<em>Morus</em>) que los sustentaban. Su trabajo no era meramente académico; era la columna vertebral científica de una industria regional con siglos de antigüedad.'
   },
-  legacy_h3_genetic: { en: 'Genetic Conservation', ru: 'Сохранение генофонда', uz: 'Genofondni saqlash' },
+  legacy_h3_genetic: { en: 'Genetic Conservation', ru: 'Сохранение генофонда', uz: 'Genofondni saqlash', es: 'Conservación genética' },
   legacy_p2_html: {
     en: 'Perhaps his most enduring contribution was the maintenance and development of the <strong>genetic fund</strong> (генофонд) of silkworm varieties adapted to the harsh continental climate of southern Kazakhstan. These locally adapted strains — capable of thriving in extreme temperature swings and low humidity — represented irreplaceable biological capital accumulated over generations of selective breeding.',
     ru: 'Возможно, его наиболее значимым вкладом было поддержание и развитие <strong>генофонда</strong> сортов тутового шелкопряда, адаптированных к суровому континентальному климату южного Казахстана. Эти местные породы — способные выживать при резких перепадах температур и низкой влажности — представляли собой незаменимый биологический капитал, накопленный поколениями селекционной работы.',
-    uz: 'Ehtimol, uning eng muhim hissasi janubiy Qozog\'istonning qattiq kontinental iqlimiga moslashgan ipak qurti navlarining <strong>genofond</strong>ini saqlash va rivojlantirish bo\'lgan. Kuchli harorat o\'zgarishlari va past namlikda yashay oladigan bu mahalliy zotlar — avlodlar davomida selektsiya orqali to\'plangan bebaho biologik sarmoyani ifodalardi.'
+    uz: 'Ehtimol, uning eng muhim hissasi janubiy Qozog\'istonning qattiq kontinental iqlimiga moslashgan ipak qurti navlarining <strong>genofond</strong>ini saqlash va rivojlantirish bo\'lgan. Kuchli harorat o\'zgarishlari va past namlikda yashay oladigan bu mahalliy zotlar — avlodlar davomida selektsiya orqali to\'plangan bebaho biologik sarmoyani ifodalardi.',
+    es: 'Quizás su contribución más perdurable fue el mantenimiento y desarrollo del <strong>fondo genético</strong> (генофонд) de variedades de gusano de seda adaptadas al duro clima continental del sur de Kazajistán. Estas cepas localmente adaptadas — capaces de prosperar en oscilaciones extremas de temperatura y baja humedad — representaban un capital biológico irremplazable acumulado durante generaciones de cría selectiva.'
   },
-  legacy_h3_agronomy: { en: 'Applied Agronomy', ru: 'Прикладная агрономия', uz: 'Amaliy agronomiya' },
+  legacy_h3_agronomy: { en: 'Applied Agronomy', ru: 'Прикладная агрономия', uz: 'Amaliy agronomiya', es: 'Agronomía aplicada' },
   legacy_p3: {
     en: 'His research extended to optimizing the entire production chain: mulberry cultivar selection, leaf quality assessment for different larval stages, cocoon harvest timing, and disease prevention in silkworm populations. This was science that fed directly into the livelihoods of thousands of families across the Turkestan region.',
     ru: 'Его исследования охватывали оптимизацию всей производственной цепочки: подбор сортов тутовника, оценку качества листа для разных стадий развития гусениц, сроки сбора коконов и профилактику болезней в популяциях шелкопряда. Это была наука, напрямую влиявшая на жизнь тысяч семей по всему Туркестанскому региону.',
-    uz: 'Uning tadqiqotlari butun ishlab chiqarish zanjirini optimallashtirishga qaratilgan edi: tut navlarini tanlash, lichinkalarning turli bosqichlari uchun barg sifatini baholash, pilla yig\'ish muddatlari va ipak qurti populyatsiyalarida kasalliklarning oldini olish. Bu Turkiston mintaqasidagi minglab oilalarning tirikchiligiga bevosita ta\'sir qilgan fan edi.'
+    uz: 'Uning tadqiqotlari butun ishlab chiqarish zanjirini optimallashtirishga qaratilgan edi: tut navlarini tanlash, lichinkalarning turli bosqichlari uchun barg sifatini baholash, pilla yig\'ish muddatlari va ipak qurti populyatsiyalarida kasalliklarning oldini olish. Bu Turkiston mintaqasidagi minglab oilalarning tirikchiligiga bevosita ta\'sir qilgan fan edi.',
+    es: 'Su investigación se extendió a la optimización de toda la cadena de producción: selección de cultivares de morera, evaluación de la calidad de la hoja para diferentes etapas larvarias, momento de cosecha del capullo y prevención de enfermedades en poblaciones de gusanos de seda. Esta era ciencia que alimentaba directamente el sustento de miles de familias en la región de Turkestán.'
   },
   legacy_quote: {
     en: 'Each silkworm cocoon contains a single silk filament up to 900 meters long. The science of maximizing yield while maintaining thread quality required understanding genetics, nutrition, pathology, and climate — all domains where Bobojonov contributed.',
     ru: 'Каждый кокон тутового шелкопряда содержит единую шёлковую нить длиной до 900 метров. Наука максимизации урожая при сохранении качества нити требовала понимания генетики, питания, патологии и климата — всех областей, в которые Бобожонов внёс вклад.',
-    uz: 'Har bir ipak qurti pillasida uzunligi 900 metrgacha bo\'lgan bitta ipak tolasi bor. Ip sifatini saqlab qolgan holda hosilni oshirish fani genetika, oziqlantirish, patologiya va iqlimni tushunishni talab qilardi — bularning barchasi Bobojonov hissa qo\'shgan sohalardir.'
+    uz: 'Har bir ipak qurti pillasida uzunligi 900 metrgacha bo\'lgan bitta ipak tolasi bor. Ip sifatini saqlab qolgan holda hosilni oshirish fani genetika, oziqlantirish, patologiya va iqlimni tushunishni talab qilardi — bularning barchasi Bobojonov hissa qo\'shgan sohalardir.',
+    es: 'Cada capullo de gusano de seda contiene un solo filamento de seda de hasta 900 metros de largo. La ciencia de maximizar el rendimiento manteniendo la calidad del hilo requería comprensión de genética, nutrición, patología y clima — todos dominios donde Bobojonov contribuyó.'
   },
 
   // Ikan
-  ikan_title: { en: 'The Ikan–Turkestan Nexus', ru: 'Связь Икана и Туркестана', uz: 'Ikon–Turkiston bog\'liqligi' },
+  ikan_title: { en: 'The Ikan–Turkestan Nexus', ru: 'Связь Икана и Туркестана', uz: 'Ikon–Turkiston bog\'liqligi', es: 'El nexo Ikán–Turkestán' },
   ikan_p1_html: {
     en: 'The village of <strong>Ikan</strong> (Икан) holds a unique place in the agricultural and intellectual history of southern Kazakhstan. Situated near <strong>Turkestan</strong> — one of Central Asia\'s oldest cities and home to the mausoleum of Khoja Ahmed Yasawi — Ikan was part of an oasis zone where irrigated agriculture had flourished for millennia.',
     ru: 'Село <strong>Икан</strong> занимает уникальное место в сельскохозяйственной и интеллектуальной истории южного Казахстана. Расположенное рядом с <strong>Туркестаном</strong> — одним из древнейших городов Средней Азии, где находится мавзолей Ходжи Ахмеда Ясави — Икан был частью оазисной зоны, где ирригационное земледелие процветало тысячелетиями.',
-    uz: '<strong>Ikon</strong> qishlog\'i janubiy Qozog\'istonning qishloq xo\'jaligi va intellektual tarixida noyob o\'rin egallaydi. Markaziy Osiyoning eng qadimiy shaharlaridan biri va Xo\'ja Ahmad Yassaviy maqbarasi joylashgan <strong>Turkiston</strong> yaqinida joylashgan Ikon — ming yillar davomida sug\'orma dehqonchilik rivojlangan vohaning bir qismi edi.'
+    uz: '<strong>Ikon</strong> qishlog\'i janubiy Qozog\'istonning qishloq xo\'jaligi va intellektual tarixida noyob o\'rin egallaydi. Markaziy Osiyoning eng qadimiy shaharlaridan biri va Xo\'ja Ahmad Yassaviy maqbarasi joylashgan <strong>Turkiston</strong> yaqinida joylashgan Ikon — ming yillar davomida sug\'orma dehqonchilik rivojlangan vohaning bir qismi edi.',
+    es: 'La aldea de <strong>Ikán</strong> (Икан) ocupa un lugar único en la historia agrícola e intelectual del sur de Kazajistán. Situada cerca de <strong>Turkestán</strong> — una de las ciudades más antiguas de Asia Central y hogar del mausoleo de Joya Ahmed Yasavi — Ikán formaba parte de una zona de oasis donde la agricultura de regadío había florecido durante milenios.'
   },
   ikan_p2_html: {
     en: 'The ethnic Uzbek communities of Ikan specialized in the most <em>knowledge-intensive</em> forms of agriculture: sericulture, horticulture, and viticulture. These were not simple grain crops — they demanded intimate understanding of biology, precise timing, and generational transmission of technique. A family that raised silkworms carried in their practice a sophisticated understanding of:',
     ru: 'Узбекские общины Икана специализировались на наиболее <em>наукоёмких</em> формах сельского хозяйства: шелководстве, садоводстве и виноградарстве. Это были не простые зерновые культуры — они требовали глубокого понимания биологии, точного расчёта времени и передачи навыков из поколения в поколение. Семья, разводившая шелкопрядов, обладала в своей практике глубоким пониманием:',
-    uz: 'Ikondagi o\'zbek jamoalari qishloq xo\'jaligining eng <em>bilim talab qiladigan</em> shakllariga ixtisoslashgan edi: ipakchilik, bog\'dorchilik va uzumchilik. Bular oddiy don ekinlari emas edi — ular biologiyani chuqur tushunishni, aniq vaqtni va texnikaning avloddan-avlodga uzatilishini talab qilardi. Ipak qurti boqqan oila o\'z amaliyotida quyidagilarni chuqur tushunardi:'
+    uz: 'Ikondagi o\'zbek jamoalari qishloq xo\'jaligining eng <em>bilim talab qiladigan</em> shakllariga ixtisoslashgan edi: ipakchilik, bog\'dorchilik va uzumchilik. Bular oddiy don ekinlari emas edi — ular biologiyani chuqur tushunishni, aniq vaqtni va texnikaning avloddan-avlodga uzatilishini talab qilardi. Ipak qurti boqqan oila o\'z amaliyotida quyidagilarni chuqur tushunardi:',
+    es: 'Las comunidades étnicas uzbekas de Ikán se especializaban en las formas más <em>intensivas en conocimiento</em> de la agricultura: sericultura, horticultura y viticultura. No eran simples cultivos de cereales — exigían un conocimiento íntimo de la biología, una sincronización precisa y la transmisión generacional de técnicas. Una familia que criaba gusanos de seda poseía en su práctica una comprensión sofisticada de:'
   },
   ikan_list_html: {
     en: '<li>Temperature and humidity control (proto-climate science)</li><li>Larval nutrition optimization (applied biology)</li><li>Disease identification and quarantine (epidemiology)</li><li>Selective breeding for desirable cocoon traits (genetics)</li><li>Post-harvest processing of raw silk (materials science)</li>',
     ru: '<li>Контроль температуры и влажности (протоклиматология)</li><li>Оптимизация питания гусениц (прикладная биология)</li><li>Выявление болезней и карантин (эпидемиология)</li><li>Селекция по желательным признакам коконов (генетика)</li><li>Послеуборочная обработка сырого шёлка (материаловедение)</li>',
-    uz: '<li>Harorat va namlikni nazorat qilish (iqlim fanining boshlang\'ich shakli)</li><li>Lichinka ovqatlanishini optimallashtirish (amaliy biologiya)</li><li>Kasalliklarni aniqlash va karantin (epidemiologiya)</li><li>Kerakli pilla xususiyatlari uchun selektsiya (genetika)</li><li>Xom ipakni qayta ishlash (materiallar fani)</li>'
+    uz: '<li>Harorat va namlikni nazorat qilish (iqlim fanining boshlang\'ich shakli)</li><li>Lichinka ovqatlanishini optimallashtirish (amaliy biologiya)</li><li>Kasalliklarni aniqlash va karantin (epidemiologiya)</li><li>Kerakli pilla xususiyatlari uchun selektsiya (genetika)</li><li>Xom ipakni qayta ishlash (materiallar fani)</li>',
+    es: '<li>Control de temperatura y humedad (protociencia climática)</li><li>Optimización de la nutrición larval (biología aplicada)</li><li>Identificación de enfermedades y cuarentena (epidemiología)</li><li>Cría selectiva para características deseables del capullo (genética)</li><li>Procesamiento poscosecha de seda cruda (ciencia de materiales)</li>'
   },
   ikan_p3_html: {
     en: 'Bobojonov was the <em>culmination</em> of this accumulated human capital. What his ancestors practiced as traditional craft, he systematized as Soviet science. The Ikan-Turkestan nexus — village knowledge flowing into academic institutions — found its highest expression in his career.',
     ru: 'Бобожонов стал <em>вершиной</em> этого накопленного человеческого капитала. То, что его предки практиковали как традиционное ремесло, он систематизировал как советскую науку. Связь Икана и Туркестана — поток деревенских знаний в академические институты — нашла высшее выражение в его карьере.',
-    uz: 'Bobojonov bu to\'plangan inson kapitalining <em>cho\'qqisi</em> edi. Ajdodlari an\'anaviy hunarmandchilik sifatida qo\'llagan narsani u sovet fani sifatida tizimlashtirdi. Ikon-Turkiston bog\'liqligi — qishloq bilimlarining akademik muassasalarga oqishi — uning karerasida eng yuqori ifodasini topdi.'
+    uz: 'Bobojonov bu to\'plangan inson kapitalining <em>cho\'qqisi</em> edi. Ajdodlari an\'anaviy hunarmandchilik sifatida qo\'llagan narsani u sovet fani sifatida tizimlashtirdi. Ikon-Turkiston bog\'liqligi — qishloq bilimlarining akademik muassasalarga oqishi — uning karerasida eng yuqori ifodasini topdi.',
+    es: 'Bobojonov fue la <em>culminación</em> de este capital humano acumulado. Lo que sus antepasados practicaban como artesanía tradicional, él lo sistematizó como ciencia soviética. El nexo Ikán-Turkestán — el conocimiento aldeano fluyendo hacia las instituciones académicas — encontró su máxima expresión en su carrera.'
   },
 
   // Sericulture
-  seri_title: { en: 'Sericulture & Strategic Importance', ru: 'Шелководство и стратегическое значение', uz: 'Ipakchilik va strategik ahamiyat' },
-  seri_subtitle: { en: 'Шелководство и стратегическое значение', ru: '', uz: '' },
-  lc_eggs_html: { en: 'Eggs<br>Грена', ru: 'Грена', uz: 'Tuxumlar' },
-  lc_larvae_html: { en: 'Larvae<br>Гусеницы', ru: 'Гусеницы', uz: 'Lichinkalar' },
-  lc_cocoon_html: { en: 'Cocoon<br>Кокон', ru: 'Кокон', uz: 'Pilla' },
-  lc_moth_html: { en: 'Moth<br>Бабочка', ru: 'Бабочка', uz: 'Kapalak' },
-  lc_silk_html: { en: 'Silk Thread<br>Шёлковая нить', ru: 'Шёлковая нить', uz: 'Ipak ip' },
+  seri_title: { en: 'Sericulture & Strategic Importance', ru: 'Шелководство и стратегическое значение', uz: 'Ipakchilik va strategik ahamiyat', es: 'Sericultura e importancia estratégica' },
+  seri_subtitle: { en: 'Шелководство и стратегическое значение', ru: '', uz: '', es: '' },
+  lc_eggs_html: { en: 'Eggs<br>Грена', ru: 'Грена', uz: 'Tuxumlar', es: 'Huevos<br>Грена' },
+  lc_larvae_html: { en: 'Larvae<br>Гусеницы', ru: 'Гусеницы', uz: 'Lichinkalar', es: 'Larvas<br>Гусеницы' },
+  lc_cocoon_html: { en: 'Cocoon<br>Кокон', ru: 'Кокон', uz: 'Pilla', es: 'Capullo<br>Кокон' },
+  lc_moth_html: { en: 'Moth<br>Бабочка', ru: 'Бабочка', uz: 'Kapalak', es: 'Polilla<br>Бабочка' },
+  lc_silk_html: { en: 'Silk Thread<br>Шёлковая нить', ru: 'Шёлковая нить', uz: 'Ipak ip', es: 'Hilo de seda<br>Шёлковая нить' },
   seri_p1_html: {
     en: 'Silk in the Soviet Union was far more than a luxury textile. It was a <strong>strategic dual-use material</strong> of significant military and economic importance:',
     ru: 'Шёлк в Советском Союзе был гораздо больше, чем предмет роскоши. Это был <strong>стратегический материал двойного назначения</strong>, имевший важное военное и экономическое значение:',
-    uz: 'Sovet Ittifoqida ipak hashamatli mato bo\'lishdan ancha ko\'proq edi. Bu muhim harbiy va iqtisodiy ahamiyatga ega <strong>strategik ikki maqsadli material</strong> edi:'
+    uz: 'Sovet Ittifoqida ipak hashamatli mato bo\'lishdan ancha ko\'proq edi. Bu muhim harbiy va iqtisodiy ahamiyatga ega <strong>strategik ikki maqsadli material</strong> edi:',
+    es: 'La seda en la Unión Soviética era mucho más que un textil de lujo. Era un <strong>material estratégico de doble uso</strong> con significativa importancia militar y económica:'
   },
-  seri_h3_defense: { en: 'Defense Applications', ru: 'Оборонное применение', uz: 'Mudofaa sohasida qo\'llanilishi' },
+  seri_h3_defense: { en: 'Defense Applications', ru: 'Оборонное применение', uz: 'Mudofaa sohasida qo\'llanilishi', es: 'Aplicaciones de defensa' },
   seri_p2_html: {
     en: 'Natural silk was essential for manufacturing <strong>parachute suspension lines</strong>. Its unique combination of tensile strength, elasticity, and light weight made it irreplaceable for airborne operations. Soviet paratroopers quite literally depended on the output of sericulture institutes like the one Bobojonov led.',
     ru: 'Натуральный шёлк был незаменим для производства <strong>парашютных строп</strong>. Уникальное сочетание прочности на разрыв, эластичности и лёгкости делало его незаменимым для воздушно-десантных операций. Советские десантники буквально зависели от продукции шелководческих институтов, подобных тому, который возглавлял Бобожонов.',
-    uz: 'Tabiiy ipak <strong>parashyut sholg\'omlari</strong> ishlab chiqarish uchun zarur edi. Uning cho\'zilish mustahkamligi, elastikligi va yengilligining noyob kombinatsiyasi uni havo-desant operatsiyalari uchun almashtirib bo\'lmas qilardi. Sovet desantchilari tom ma\'noda Bobojonov boshqargan kabi ipakchilik institutlarining mahsulotiga bog\'liq edi.'
+    uz: 'Tabiiy ipak <strong>parashyut sholg\'omlari</strong> ishlab chiqarish uchun zarur edi. Uning cho\'zilish mustahkamligi, elastikligi va yengilligining noyob kombinatsiyasi uni havo-desant operatsiyalari uchun almashtirib bo\'lmas qilardi. Sovet desantchilari tom ma\'noda Bobojonov boshqargan kabi ipakchilik institutlarining mahsulotiga bog\'liq edi.',
+    es: 'La seda natural era esencial para la fabricación de <strong>líneas de suspensión de paracaídas</strong>. Su combinación única de resistencia a la tracción, elasticidad y ligereza la hacía irremplazable para operaciones aerotransportadas. Los paracaidistas soviéticos dependían literalmente de la producción de institutos de sericultura como el que dirigía Bobojonov.'
   },
-  seri_h3_trade: { en: 'Currency & Trade', ru: 'Валюта и торговля', uz: 'Valyuta va savdo' },
+  seri_h3_trade: { en: 'Currency & Trade', ru: 'Валюта и торговля', uz: 'Valyuta va savdo', es: 'Divisas y comercio' },
   seri_p3_html: {
     en: 'Raw silk and silk products were valuable <strong>export commodities</strong> that earned hard currency for the Soviet state. The silk industry of Central Asia was a significant contributor to the USSR\'s foreign trade balance.',
     ru: 'Шёлк-сырец и шёлковые изделия были ценными <strong>экспортными товарами</strong>, приносившими твёрдую валюту советскому государству. Шёлковая промышленность Средней Азии вносила значительный вклад в внешнеторговый баланс СССР.',
-    uz: 'Xom ipak va ipak mahsulotlari sovet davlatiga qattiq valyuta keltirgan qimmatli <strong>eksport tovarlari</strong> edi. Markaziy Osiyoning ipak sanoati SSSRning tashqi savdo balansiga sezilarli hissa qo\'shardi.'
+    uz: 'Xom ipak va ipak mahsulotlari sovet davlatiga qattiq valyuta keltirgan qimmatli <strong>eksport tovarlari</strong> edi. Markaziy Osiyoning ipak sanoati SSSRning tashqi savdo balansiga sezilarli hissa qo\'shardi.',
+    es: 'La seda cruda y los productos de seda eran valiosos <strong>productos de exportación</strong> que generaban divisas fuertes para el Estado soviético. La industria de la seda de Asia Central contribuía significativamente a la balanza comercial exterior de la URSS.'
   },
-  seri_h3_industrial: { en: 'Industrial Applications', ru: 'Промышленное применение', uz: 'Sanoat sohasida qo\'llanilishi' },
+  seri_h3_industrial: { en: 'Industrial Applications', ru: 'Промышленное применение', uz: 'Sanoat sohasida qo\'llanilishi', es: 'Aplicaciones industriales' },
   seri_p4_html: {
     en: 'Beyond textiles and military use, silk found applications in surgical sutures, electrical insulation, and specialized industrial fabrics — making sericulture research a matter of genuine state interest.',
     ru: 'Помимо текстильного и военного применения, шёлк использовался в хирургических швах, электроизоляции и специальных промышленных тканях — что делало исследования в области шелководства вопросом подлинного государственного интереса.',
-    uz: 'To\'qimachilik va harbiy foydalanishdan tashqari, ipak jarrohlik tikuvlarida, elektr izolyatsiyasida va maxsus sanoat matolarida qo\'llanildi — bu ipakchilik tadqiqotlarini haqiqiy davlat manfaati masalasiga aylantirdi.'
+    uz: 'To\'qimachilik va harbiy foydalanishdan tashqari, ipak jarrohlik tikuvlarida, elektr izolyatsiyasida va maxsus sanoat matolarida qo\'llanildi — bu ipakchilik tadqiqotlarini haqiqiy davlat manfaati masalasiga aylantirdi.',
+    es: 'Más allá de los textiles y el uso militar, la seda encontró aplicaciones en suturas quirúrgicas, aislamiento eléctrico y tejidos industriales especializados — convirtiendo la investigación en sericultura en un asunto de genuino interés estatal.'
   },
   seri_quote: {
     en: 'When Bobojonov maintained the genetic diversity of silkworm populations, he was safeguarding not just an academic collection but a strategic national asset. The loss of adapted local varieties would have been as significant, in its way, as the loss of a weapons program.',
     ru: 'Поддерживая генетическое разнообразие популяций шелкопряда, Бобожонов охранял не просто академическую коллекцию, а стратегический национальный актив. Потеря адаптированных местных сортов была бы по-своему столь же значимой, как утрата оборонной программы.',
-    uz: 'Bobojonov ipak qurti populyatsiyalarining genetik xilma-xilligini saqlab, nafaqat akademik kolleksiyani, balki strategik milliy boylikni muhofaza qilardi. Mahalliy moslashgan navlarning yo\'qolishi, o\'z yo\'sinda, qurol dasturining yo\'qolishi kabi muhim bo\'lardi.'
+    uz: 'Bobojonov ipak qurti populyatsiyalarining genetik xilma-xilligini saqlab, nafaqat akademik kolleksiyani, balki strategik milliy boylikni muhofaza qilardi. Mahalliy moslashgan navlarning yo\'qolishi, o\'z yo\'sinda, qurol dasturining yo\'qolishi kabi muhim bo\'lardi.',
+    es: 'Cuando Bobojonov mantenía la diversidad genética de las poblaciones de gusanos de seda, estaba salvaguardando no solo una colección académica, sino un activo nacional estratégico. La pérdida de variedades locales adaptadas habría sido, a su manera, tan significativa como la pérdida de un programa armamentístico.'
   },
 
   // Comparison
-  compare_title: { en: 'Then & Now · Тогда и сейчас', ru: 'Тогда и сейчас', uz: 'O\'sha va hozir' },
+  compare_title: { en: 'Then & Now · Тогда и сейчас', ru: 'Тогда и сейчас', uz: 'O\'sha va hozir', es: 'Antes y ahora' },
   compare_intro: {
     en: 'The path to academic leadership that Bobojonov walked has changed fundamentally. A comparison illuminates what has been gained — and lost.',
     ru: 'Путь к академическому руководству, которым шёл Бобожонов, принципиально изменился. Сравнение проливает свет на то, что было приобретено — и утрачено.',
-    uz: 'Bobojonov bosib o\'tgan akademik rahbarlikka olib boruvchi yo\'l tubdan o\'zgardi. Taqqoslash nimalar qo\'lga kiritilganini — va nimalar yo\'qotilganini ko\'rsatadi.'
+    uz: 'Bobojonov bosib o\'tgan akademik rahbarlikka olib boruvchi yo\'l tubdan o\'zgardi. Taqqoslash nimalar qo\'lga kiritilganini — va nimalar yo\'qotilganini ko\'rsatadi.',
+    es: 'El camino hacia el liderazgo académico que recorrió Bobojonov ha cambiado fundamentalmente. Una comparación ilumina lo que se ha ganado — y perdido.'
   },
-  compare_then_h4: { en: '🎓 Soviet Era (Bobojonov\'s time)', ru: '🎓 Советская эпоха (время Бобожонова)', uz: '🎓 Sovet davri (Bobojonov davri)' },
+  compare_then_h4: { en: '🎓 Soviet Era (Bobojonov\'s time)', ru: '🎓 Советская эпоха (время Бобожонова)', uz: '🎓 Sovet davri (Bobojonov davri)', es: '🎓 Era soviética (época de Bobojonov)' },
   compare_then_html: {
     en: '<strong>Path to rector:</strong> Field work → Research → Dissertation → Chair → Dean → Rector<br><strong>Key credential:</strong> Scientific publications, experimental results, peer recognition<br><strong>Timeframe:</strong> 25–35 years of continuous scholarly work<br><strong>Authority source:</strong> Deep domain expertise — the rector could discuss any technical problem in his field',
     ru: '<strong>Путь к ректору:</strong> Полевая работа → Исследования → Диссертация → Кафедра → Декан → Ректор<br><strong>Главный критерий:</strong> Научные публикации, экспериментальные результаты, признание коллег<br><strong>Сроки:</strong> 25–35 лет непрерывной научной работы<br><strong>Источник авторитета:</strong> Глубокая экспертиза — ректор мог обсудить любую техническую проблему в своей области',
-    uz: '<strong>Rektorlikka yo\'l:</strong> Dala ishi → Tadqiqot → Dissertatsiya → Kafedra → Dekan → Rektor<br><strong>Asosiy mezon:</strong> Ilmiy nashrlar, tajriba natijalari, hamkasblar e\'tirofi<br><strong>Muddat:</strong> 25–35 yillik uzluksiz ilmiy ish<br><strong>Obro\' manbasi:</strong> Chuqur soha tajribasi — rektor o\'z sohasidagi har qanday texnik muammoni muhokama qila olardi'
+    uz: '<strong>Rektorlikka yo\'l:</strong> Dala ishi → Tadqiqot → Dissertatsiya → Kafedra → Dekan → Rektor<br><strong>Asosiy mezon:</strong> Ilmiy nashrlar, tajriba natijalari, hamkasblar e\'tirofi<br><strong>Muddat:</strong> 25–35 yillik uzluksiz ilmiy ish<br><strong>Obro\' manbasi:</strong> Chuqur soha tajribasi — rektor o\'z sohasidagi har qanday texnik muammoni muhokama qila olardi',
+    es: '<strong>Camino al rector:</strong> Trabajo de campo → Investigación → Disertación → Cátedra → Decano → Rector<br><strong>Credencial clave:</strong> Publicaciones científicas, resultados experimentales, reconocimiento de pares<br><strong>Plazo:</strong> 25–35 años de trabajo académico continuo<br><strong>Fuente de autoridad:</strong> Profunda experiencia en el dominio — el rector podía discutir cualquier problema técnico en su campo'
   },
-  compare_now_h4: { en: '🏢 Post-Soviet Era (present)', ru: '🏢 Постсоветская эпоха (настоящее время)', uz: '🏢 Sovetdan keyingi davr (hozirgi)' },
+  compare_now_h4: { en: '🏢 Post-Soviet Era (present)', ru: '🏢 Постсоветская эпоха (настоящее время)', uz: '🏢 Sovetdan keyingi davr (hozirgi)', es: '🏢 Era postsoviética (presente)' },
   compare_now_html: {
     en: '<strong>Path to rector:</strong> Often administrative/political connections, ministerial appointment<br><strong>Key credential:</strong> Management experience, political alignment, sometimes formal credentials of uncertain rigor<br><strong>Timeframe:</strong> Variable — can be rapid with the right connections<br><strong>Authority source:</strong> Institutional position rather than personal expertise',
     ru: '<strong>Путь к ректору:</strong> Часто административные/политические связи, назначение министерством<br><strong>Главный критерий:</strong> Управленческий опыт, политическая лояльность, иногда формальные квалификации сомнительной строгости<br><strong>Сроки:</strong> Варьируются — могут быть быстрыми при нужных связях<br><strong>Источник авторитета:</strong> Институциональная позиция, а не личная экспертиза',
-    uz: '<strong>Rektorlikka yo\'l:</strong> Ko\'pincha ma\'muriy/siyosiy aloqalar, vazirlik tayinlovi<br><strong>Asosiy mezon:</strong> Boshqaruv tajribasi, siyosiy sodiqlik, ba\'zan shubhali qat\'iylikdagi rasmiy malakalar<br><strong>Muddat:</strong> O\'zgaruvchan — kerakli aloqalar bilan tez bo\'lishi mumkin<br><strong>Obro\' manbasi:</strong> Shaxsiy tajriba emas, balki muassasa lavozimi'
+    uz: '<strong>Rektorlikka yo\'l:</strong> Ko\'pincha ma\'muriy/siyosiy aloqalar, vazirlik tayinlovi<br><strong>Asosiy mezon:</strong> Boshqaruv tajribasi, siyosiy sodiqlik, ba\'zan shubhali qat\'iylikdagi rasmiy malakalar<br><strong>Muddat:</strong> O\'zgaruvchan — kerakli aloqalar bilan tez bo\'lishi mumkin<br><strong>Obro\' manbasi:</strong> Shaxsiy tajriba emas, balki muassasa lavozimi',
+    es: '<strong>Camino al rector:</strong> Frecuentemente conexiones administrativas/políticas, nombramiento ministerial<br><strong>Credencial clave:</strong> Experiencia en gestión, alineación política, a veces credenciales formales de rigor incierto<br><strong>Plazo:</strong> Variable — puede ser rápido con las conexiones adecuadas<br><strong>Fuente de autoridad:</strong> Posición institucional en lugar de experiencia personal'
   },
   compare_conclusion: {
     en: 'Bobojonov belonged to a generation where the title "professor" or "rector" carried the weight of genuine accomplishment. The scholar-administrator was not merely a manager of an institution — he was its intellectual center of gravity, capable of evaluating research, guiding dissertations, and contributing original findings well into his administrative tenure.',
     ru: 'Бобожонов принадлежал к поколению, в котором звание «профессор» или «ректор» несло в себе вес подлинных достижений. Учёный-руководитель был не просто управленцем — он был интеллектуальным центром притяжения института, способным оценивать исследования, руководить диссертациями и вносить оригинальный вклад в науку на протяжении всего срока своего руководства.',
-    uz: 'Bobojonov "professor" yoki "rektor" unvoni haqiqiy yutuqlar og\'irligini tashigan avlodga mansub edi. Olim-rahbar muassasaning oddiy boshqaruvchisi emas — u uning intellektual tortishish markazi edi, tadqiqotlarni baholashga, dissertatsiyalarga rahbarlik qilishga va rahbarlik davrida original kashfiyotlar qilishga qodir edi.'
+    uz: 'Bobojonov "professor" yoki "rektor" unvoni haqiqiy yutuqlar og\'irligini tashigan avlodga mansub edi. Olim-rahbar muassasaning oddiy boshqaruvchisi emas — u uning intellektual tortishish markazi edi, tadqiqotlarni baholashga, dissertatsiyalarga rahbarlik qilishga va rahbarlik davrida original kashfiyotlar qilishga qodir edi.',
+    es: 'Bobojonov perteneció a una generación donde el título de «profesor» o «rector» llevaba el peso de logros genuinos. El académico-administrador no era meramente un gestor de una institución — era su centro de gravedad intelectual, capaz de evaluar investigaciones, guiar disertaciones y aportar hallazgos originales a lo largo de su mandato administrativo.'
   },
 
   // Gallery
-  gallery_title: { en: 'Gallery · Галерея', ru: 'Галерея', uz: 'Galereya' },
+  gallery_title: { en: 'Gallery · Галерея', ru: 'Галерея', uz: 'Galereya', es: 'Galería' },
   gallery_note: {
     en: 'From the office to the field — photographs from the family archive.',
     ru: 'От кабинета до поля — фотографии из семейного архива.',
-    uz: 'Kabinetdan dalaga qadar — oilaviy arxivdan fotosuratlar.'
+    uz: 'Kabinetdan dalaga qadar — oilaviy arxivdan fotosuratlar.',
+    es: 'De la oficina al campo — fotografías del archivo familiar.'
   },
-  gal_01: { en: 'At the office — on the telephone', ru: 'В кабинете — у телефона', uz: 'Kabinetda — telefonda' },
-  gal_02: { en: 'Official portraits', ru: 'Официальные портреты', uz: 'Rasmiy portretlar' },
-  gal_03: { en: 'At his desk — reviewing documents', ru: 'За рабочим столом — изучение документов', uz: 'Ish stolida — hujjatlarni ko\'rib chiqmoqda' },
-  gal_04: { en: 'At the institute', ru: 'В институте', uz: 'Institutda' },
-  gal_05: { en: 'With colleagues at the office', ru: 'С коллегами в кабинете', uz: 'Kabinetda hamkasblar bilan' },
-  gal_06: { en: 'Group portrait with colleagues', ru: 'Групповой портрет с коллегами', uz: 'Hamkasblar bilan guruh surati' },
-  gal_07: { en: 'In the field — inspecting crops', ru: 'В поле — осмотр посевов', uz: 'Dalada — ekinlarni tekshirmoqda' },
-  gal_08: { en: 'Walking through the fields', ru: 'На полях', uz: 'Dalada' },
-  gal_09: { en: 'In the field with students', ru: 'В поле со студентами', uz: 'Dalada talabalar bilan' },
-  gal_10: { en: 'Biographical entry — historical compendium', ru: 'Биографическая запись — исторический справочник', uz: 'Biografik yozuv — tarixiy ma\'lumotnoma' },
+  gal_01: { en: 'At the office — on the telephone', ru: 'В кабинете — у телефона', uz: 'Kabinetda — telefonda', es: 'En la oficina — al teléfono' },
+  gal_02: { en: 'Official portraits', ru: 'Официальные портреты', uz: 'Rasmiy portretlar', es: 'Retratos oficiales' },
+  gal_03: { en: 'At his desk — reviewing documents', ru: 'За рабочим столом — изучение документов', uz: 'Ish stolida — hujjatlarni ko\'rib chiqmoqda', es: 'En su escritorio — revisando documentos' },
+  gal_04: { en: 'At the institute', ru: 'В институте', uz: 'Institutda', es: 'En el instituto' },
+  gal_05: { en: 'With colleagues at the office', ru: 'С коллегами в кабинете', uz: 'Kabinetda hamkasblar bilan', es: 'Con colegas en la oficina' },
+  gal_06: { en: 'Group portrait with colleagues', ru: 'Групповой портрет с коллегами', uz: 'Hamkasblar bilan guruh surati', es: 'Retrato grupal con colegas' },
+  gal_07: { en: 'In the field — inspecting crops', ru: 'В поле — осмотр посевов', uz: 'Dalada — ekinlarni tekshirmoqda', es: 'En el campo — inspeccionando cultivos' },
+  gal_08: { en: 'Walking through the fields', ru: 'На полях', uz: 'Dalada', es: 'Caminando por los campos' },
+  gal_09: { en: 'In the field with students', ru: 'В поле со студентами', uz: 'Dalada talabalar bilan', es: 'En el campo con estudiantes' },
+  gal_10: { en: 'Biographical entry — historical compendium', ru: 'Биографическая запись — исторический справочник', uz: 'Biografik yozuv — tarixiy ma\'lumotnoma', es: 'Entrada biográfica — compendio histórico' },
 
   // Family
-  family_title: { en: 'Family Legacy · Наследие семьи', ru: 'Наследие семьи', uz: 'Oila merosi' },
+  family_title: { en: 'Family Legacy · Наследие семьи', ru: 'Наследие семьи', uz: 'Oila merosi', es: 'Legado familiar' },
   family_p1_html: {
     en: 'Gulam Bobojonovich Bobojonov\'s legacy extends beyond his scientific contributions and institutional leadership. Together with his wife, <strong>Habiba Bobojonova</strong>, he raised <strong>seven daughters</strong> — <em>Elmira, Anila, Hursana, Ravshana, Delya, Gulya,</em> and <em>Mikhri</em> — in a home where learning and devotion to family were inseparable.',
     ru: 'Наследие Гулома Бобожоновича выходит далеко за рамки его научных достижений и институционального руководства. Вместе со своей женой, <strong>Хабибой Бобожоновой</strong>, он воспитал <strong>семерых дочерей</strong> — <em>Эльмиру, Анилу, Хурсану, Равшану, Делю, Гулю</em> и <em>Михри</em> — в доме, где учёба и преданность семье были неразрывно связаны.',
-    uz: 'Gulom Bobojonovichning merosi uning ilmiy yutuqlari va muassasa rahbarligidan ancha uzoqqa cho\'ziladi. Rafiqasi <strong>Habiba Bobojonova</strong> bilan birga u <strong>yetti qiz</strong>ni — <em>Elmira, Anila, Xursana, Ravshana, Delya, Gulya</em> va <em>Mixri</em>ni — o\'qish va oilaga sadoqat ajralmas bo\'lgan uyda tarbiyaladi.'
+    uz: 'Gulom Bobojonovichning merosi uning ilmiy yutuqlari va muassasa rahbarligidan ancha uzoqqa cho\'ziladi. Rafiqasi <strong>Habiba Bobojonova</strong> bilan birga u <strong>yetti qiz</strong>ni — <em>Elmira, Anila, Xursana, Ravshana, Delya, Gulya</em> va <em>Mixri</em>ni — o\'qish va oilaga sadoqat ajralmas bo\'lgan uyda tarbiyaladi.',
+    es: 'El legado de Gulom Bobojonovich va más allá de sus contribuciones científicas y su liderazgo institucional. Junto a su esposa, <strong>Habiba Bobojonova</strong>, crió a <strong>siete hijas</strong> — <em>Elmira, Anila, Hursana, Ravshana, Delya, Gulya</em> y <em>Mikhri</em> — en un hogar donde el aprendizaje y la devoción familiar eran inseparables.'
   },
   family_p1b_html: {
     en: 'Habiba was a remarkable mother — nurturing, steadfast, and deeply devoted to her daughters. In a household shaped by the demands of academic life and public service, she was the center around which everything held together. The warmth and cohesion of the Bobojonov family was as much her creation as Gulom\'s scholarly achievements were his.',
     ru: 'Хабиба была замечательной матерью — заботливой, стойкой и бесконечно преданной своим дочерям. В доме, подчинённом требованиям академической жизни и общественного служения, она была тем центром, вокруг которого всё держалось. Теплота и сплочённость семьи Бобожоновых — это её заслуга в не меньшей степени, чем научные достижения были заслугой Гулома.',
-    uz: 'Habiba ajoyib ona edi — mehribon, bardoshli va qizlariga cheksiz sadoqatli. Akademik hayot va jamoat xizmati talablari bilan shakllangan uyda u hamma narsani bir joyda ushlab turgan markaz edi. Bobojonovlar oilasining iliqlik va birdamligi Gulomning ilmiy yutuqlari qanchalik uniki bo\'lsa, shunchalik Habibaning ham yaratgani edi.'
+    uz: 'Habiba ajoyib ona edi — mehribon, bardoshli va qizlariga cheksiz sadoqatli. Akademik hayot va jamoat xizmati talablari bilan shakllangan uyda u hamma narsani bir joyda ushlab turgan markaz edi. Bobojonovlar oilasining iliqlik va birdamligi Gulomning ilmiy yutuqlari qanchalik uniki bo\'lsa, shunchalik Habibaning ham yaratgani edi.',
+    es: 'Habiba fue una madre extraordinaria: cariñosa, firme y profundamente dedicada a sus hijas. En un hogar marcado por las exigencias de la vida académica y el servicio público, ella era el centro alrededor del cual todo se sostenía. La calidez y cohesión de la familia Bobojonov fue tanto su obra como los logros científicos fueron los de Gulom.'
   },
   family_h3_after: {
     en: 'After 1955 · После 1955 года',
     ru: 'После 1955 года',
-    uz: '1955-yildan keyin'
+    uz: '1955-yildan keyin',
+    es: 'Después de 1955'
   },
   family_p_after_html: {
     en: 'When Gulom passed away on 21 May 1955 at just 47 years old, his youngest daughters were still children. <strong>Habiba</strong>, together with the eldest daughter <strong>Elmira</strong>, took on the immense responsibility of raising the six younger girls. It was not easy — a widow with seven daughters in Soviet Central Asia — but Habiba\'s strength and Elmira\'s early maturity ensured that every one of the sisters was raised with dignity, education, and love.',
     ru: 'Когда Гулом скончался 21 мая 1955 года в возрасте всего 47 лет, его младшие дочери были ещё детьми. <strong>Хабиба</strong> вместе со старшей дочерью <strong>Эльмирой</strong> приняла на себя огромную ответственность — воспитание шести младших девочек. Это было непросто — вдова с семью дочерьми в советской Средней Азии — но стойкость Хабибы и ранняя зрелость Эльмиры обеспечили каждой из сестёр достойное воспитание, образование и любовь.',
-    uz: 'Gulom 1955-yil 21-mayda atigi 47 yoshida vafot etganida, uning kichik qizlari hali bolalar edi. <strong>Habiba</strong> to\'ng\'ich qizi <strong>Elmira</strong> bilan birga olti kichik qizni tarbiyalashning ulkan mas\'uliyatini o\'z zimmasiga oldi. Bu oson emas edi — sovet Markaziy Osiyosida yetti qizli beva ayol — lekin Habibaning kuchi va Elmiraning erta yetishtirish har bir singlining qadr-qimmat, ta\'lim va muhabbat bilan tarbiyalanishini ta\'minladi.'
+    uz: 'Gulom 1955-yil 21-mayda atigi 47 yoshida vafot etganida, uning kichik qizlari hali bolalar edi. <strong>Habiba</strong> to\'ng\'ich qizi <strong>Elmira</strong> bilan birga olti kichik qizni tarbiyalashning ulkan mas\'uliyatini o\'z zimmasiga oldi. Bu oson emas edi — sovet Markaziy Osiyosida yetti qizli beva ayol — lekin Habibaning kuchi va Elmiraning erta yetishtirish har bir singlining qadr-qimmat, ta\'lim va muhabbat bilan tarbiyalanishini ta\'minladi.',
+    es: 'Cuando Gulom falleció el 21 de mayo de 1955 con apenas 47 años, sus hijas más pequeñas aún eran niñas. <strong>Habiba</strong>, junto con la hija mayor <strong>Elmira</strong>, asumió la inmensa responsabilidad de criar a las seis hijas menores. No fue fácil — una viuda con siete hijas en la Asia Central soviética — pero la fortaleza de Habiba y la temprana madurez de Elmira garantizaron que cada una de las hermanas fuera criada con dignidad, educación y amor.'
   },
   family_quote_habiba: {
     en: 'Habiba and Elmira did not merely keep the family together — they forged a bond among the seven sisters that has endured across generations. The families descended from the Bobojonov daughters remain close to this day, bound by a shared history and the values their parents instilled.',
     ru: 'Хабиба и Эльмира не просто сохранили семью — они выковали связь между семью сёстрами, которая пережила поколения. Семьи, произошедшие от дочерей Бобожонова, остаются близки по сей день, связанные общей историей и ценностями, привитыми их родителями.',
-    uz: 'Habiba va Elmira oilani faqat saqlab qolibgina emas — ular yetti opa-singillar o\'rtasida avlodlar bo\'ylab davom etgan rishta yaratdilar. Bobojonov qizlaridan tarqalgan oilalar bugungi kungacha yaqin bo\'lib qolmoqda, umumiy tarix va ota-onalari singdirgan qadriyatlar bilan bog\'langan.'
+    uz: 'Habiba va Elmira oilani faqat saqlab qolibgina emas — ular yetti opa-singillar o\'rtasida avlodlar bo\'ylab davom etgan rishta yaratdilar. Bobojonov qizlaridan tarqalgan oilalar bugungi kungacha yaqin bo\'lib qolmoqda, umumiy tarix va ota-onalari singdirgan qadriyatlar bilan bog\'langan.',
+    es: 'Habiba y Elmira no solo mantuvieron unida a la familia — forjaron un vínculo entre las siete hermanas que ha perdurado a lo largo de generaciones. Las familias descendientes de las hijas de los Bobojonov siguen siendo cercanas hasta hoy, unidas por una historia compartida y los valores que sus padres inculcaron.'
   },
   family_p2_html: {
     en: 'His life story — from the mulberry groves of Ikan to the rector\'s office — represents a broader narrative of <strong>Central Asian intellectual achievement</strong> during the Soviet period. Families like the Bobojonovs navigated between traditional agricultural knowledge and modern scientific institutions, between their Uzbek cultural identity and the demands of a multinational state, between village roots and cosmopolitan education.',
     ru: 'Его жизненная история — от тутовых рощ Икана до кабинета ректора — представляет собой более широкое повествование об <strong>интеллектуальных достижениях Центральной Азии</strong> в советский период. Такие семьи, как Бобожоновы, лавировали между традиционными сельскохозяйственными знаниями и современными научными институтами, между узбекской культурной идентичностью и требованиями многонационального государства, между деревенскими корнями и космополитическим образованием.',
-    uz: 'Uning hayot hikoyasi — Ikonning tut bog\'laridan rektor kabinetiga qadar — sovet davrida <strong>Markaziy Osiyoning intellektual yutuqlari</strong>ning kengroq rivoyatini ifodalaydi. Bobojonovlar kabi oilalar an\'anaviy qishloq xo\'jaligi bilimlari va zamonaviy ilmiy muassasalar o\'rtasida, o\'zbek madaniy identiteti va ko\'pmillatli davlat talablari o\'rtasida, qishloq ildizlari va kosmopolit ta\'lim o\'rtasida yo\'l topdilar.'
+    uz: 'Uning hayot hikoyasi — Ikonning tut bog\'laridan rektor kabinetiga qadar — sovet davrida <strong>Markaziy Osiyoning intellektual yutuqlari</strong>ning kengroq rivoyatini ifodalaydi. Bobojonovlar kabi oilalar an\'anaviy qishloq xo\'jaligi bilimlari va zamonaviy ilmiy muassasalar o\'rtasida, o\'zbek madaniy identiteti va ko\'pmillatli davlat talablari o\'rtasida, qishloq ildizlari va kosmopolit ta\'lim o\'rtasida yo\'l topdilar.',
+    es: 'Su historia de vida — desde los huertos de moreras de Ikan hasta el despacho del rector — representa una narrativa más amplia del <strong>logro intelectual centroasiático</strong> durante el período soviético. Familias como los Bobojonov navegaron entre el conocimiento agrícola tradicional y las instituciones científicas modernas, entre su identidad cultural uzbeka y las demandas de un estado multinacional, entre las raíces rurales y la educación cosmopolita.'
   },
   family_quote: {
     en: '"He showed that the deepest expertise grows from the soil — literally. The knowledge of silk, cultivated over generations in a small village, became the foundation of a scientific career that served an empire."',
     ru: '«Он показал, что самая глубокая экспертиза растёт из земли — буквально. Знание о шёлке, взращённое поколениями в маленьком селе, стало основой научной карьеры, служившей империи.»',
-    uz: '"U eng chuqur tajriba tuproqdan o\'sishini ko\'rsatdi — tom ma\'noda. Kichik qishloqda avlodlar davomida yetishtirilgan ipak haqidagi bilim imperiyaga xizmat qilgan ilmiy karerani poydevor bo\'ldi."'
+    uz: '"U eng chuqur tajriba tuproqdan o\'sishini ko\'rsatdi — tom ma\'noda. Kichik qishloqda avlodlar davomida yetishtirilgan ipak haqidagi bilim imperiyaga xizmat qilgan ilmiy karerani poydevor bo\'ldi."',
+    es: '"Demostró que el conocimiento más profundo crece del suelo — literalmente. El saber sobre la seda, cultivado durante generaciones en un pequeño pueblo, se convirtió en el cimiento de una carrera científica que sirvió a un imperio."'
   },
   family_p3: {
     en: 'The family\'s roots in Ikan, their connection to the land and to the ancient craft of sericulture, remain a source of identity and pride. The seven daughters, the grandchildren, and the great-grandchildren of Gulom and Habiba are spread across the world today, yet they remain a single cohesive family — a testament to the foundation their parents built. This memorial page exists to ensure that the story is not lost — that future generations can find and know it.',
     ru: 'Корни семьи в Икане, их связь с землёй и с древним ремеслом шелководства остаются источником идентичности и гордости. Семеро дочерей, внуки и правнуки Гулома и Хабибы рассеяны по всему миру, но остаются единой сплочённой семьёй — свидетельством того фундамента, который заложили их родители. Эта мемориальная страница создана, чтобы история не была утрачена — чтобы будущие поколения могли найти и узнать её.',
-    uz: 'Oilaning Ikondagi ildizlari, tuproq va qadimiy ipakchilik hunari bilan bog\'liqligi identitet va g\'urur manbasi bo\'lib qolmoqda. Gulom va Habibaning yetti qizi, nevaralari va chevaralari bugun butun dunyo bo\'ylab tarqalgan, ammo ular yagona birdam oila bo\'lib qolmoqda — bu ota-onalari qurgan poydevorning dalilidir. Ushbu xotira sahifasi hikoya yo\'qolmasligini ta\'minlash uchun yaratilgan — kelajak avlodlar uni topib, bilishlari uchun.'
+    uz: 'Oilaning Ikondagi ildizlari, tuproq va qadimiy ipakchilik hunari bilan bog\'liqligi identitet va g\'urur manbasi bo\'lib qolmoqda. Gulom va Habibaning yetti qizi, nevaralari va chevaralari bugun butun dunyo bo\'ylab tarqalgan, ammo ular yagona birdam oila bo\'lib qolmoqda — bu ota-onalari qurgan poydevorning dalilidir. Ushbu xotira sahifasi hikoya yo\'qolmasligini ta\'minlash uchun yaratilgan — kelajak avlodlar uni topib, bilishlari uchun.',
+    es: 'Las raíces de la familia en Ikan, su conexión con la tierra y con el antiguo oficio de la sericicultura, siguen siendo fuente de identidad y orgullo. Las siete hijas, los nietos y los bisnietos de Gulom y Habiba están dispersos por el mundo hoy, pero permanecen como una sola familia cohesionada — testamento al cimiento que construyeron sus padres. Esta página memorial existe para asegurar que la historia no se pierda — para que las generaciones futuras puedan encontrarla y conocerla.'
   },
 
   // Infobox
-  ib_fullname: { en: 'Full name', ru: 'Полное имя', uz: 'To\'liq ism' },
-  ib_born: { en: 'Born', ru: 'Рождение', uz: 'Tug\'ilgan' },
+  ib_fullname: { en: 'Full name', ru: 'Полное имя', uz: 'To\'liq ism', es: 'Nombre completo' },
+  ib_born: { en: 'Born', ru: 'Рождение', uz: 'Tug\'ilgan', es: 'Nacimiento' },
   ib_born_val_html: {
     en: '<strong>1907</strong><br>Village of Ikan (Иқон), near Turkestan',
     ru: '<strong>1907</strong><br>Село Икан (Иқон), близ Туркестана',
-    uz: '<strong>1907</strong><br>Ikon (Иқон) qishlog\'i, Turkiston yaqinida, '
+    uz: '<strong>1907</strong><br>Ikon (Иқон) qishlog\'i, Turkiston yaqinida, ',
+    es: '<strong>1907</strong><br>Aldea de Ikan (Иқон), cerca de Turkestán'
   },
-  ib_nationality: { en: 'Nationality', ru: 'Гражданство', uz: 'Fuqarolik' },
-  ib_nationality_val: { en: 'Soviet / Kazakh SSR', ru: 'СССР / Казахская ССР', uz: 'SSSR / Qozog\'iston SSR' },
-  ib_ethnicity: { en: 'Ethnicity', ru: 'Этничность', uz: 'Millati' },
-  ib_ethnicity_val: { en: 'Uzbek', ru: 'Узбек', uz: 'O\'zbek' },
-  ib_field: { en: 'Field', ru: 'Область', uz: 'Soha' },
+  ib_nationality: { en: 'Nationality', ru: 'Гражданство', uz: 'Fuqarolik', es: 'Nacionalidad' },
+  ib_nationality_val: { en: 'Soviet / Kazakh SSR', ru: 'СССР / Казахская ССР', uz: 'SSSR / Qozog\'iston SSR', es: 'Soviética / RSS de Kazajistán' },
+  ib_ethnicity: { en: 'Ethnicity', ru: 'Этничность', uz: 'Millati', es: 'Etnicidad' },
+  ib_ethnicity_val: { en: 'Uzbek', ru: 'Узбек', uz: 'O\'zbek', es: 'Uzbeko' },
+  ib_field: { en: 'Field', ru: 'Область', uz: 'Soha', es: 'Campo' },
   ib_field_val_html: {
     en: 'Sericulture (шелководство)<br>Agricultural Sciences',
     ru: 'Шелководство<br>Сельскохозяйственные науки',
-    uz: 'Ipakchilik<br>Qishloq xo\'jaligi fanlari'
+    uz: 'Ipakchilik<br>Qishloq xo\'jaligi fanlari',
+    es: 'Sericicultura (шелководство)<br>Ciencias Agrícolas'
   },
-  ib_specialty: { en: 'Specialty', ru: 'Специальность', uz: 'Mutaxassislik' },
+  ib_specialty: { en: 'Specialty', ru: 'Специальность', uz: 'Mutaxassislik', es: 'Especialidad' },
   ib_specialty_val_html: {
     en: 'Silkworm breeding (<em>Bombyx mori</em>), mulberry cultivation',
     ru: 'Разведение тутового шелкопряда (<em>Bombyx mori</em>), тутоводство',
-    uz: 'Ipak qurti yetishtirish (<em>Bombyx mori</em>), tut parvarishi'
+    uz: 'Ipak qurti yetishtirish (<em>Bombyx mori</em>), tut parvarishi',
+    es: 'Cría de gusanos de seda (<em>Bombyx mori</em>), cultivo de moreras'
   },
-  ib_position: { en: 'Position', ru: 'Должность', uz: 'Lavozim' },
+  ib_position: { en: 'Position', ru: 'Должность', uz: 'Lavozim', es: 'Cargo' },
   ib_position_val: {
     en: 'Director, Agricultural Institute, Tashkent',
     ru: 'Директор Сельскохозяйственного института, Ташкент',
-    uz: 'Direktor, Qishloq xo\'jaligi instituti, Toshkent'
+    uz: 'Direktor, Qishloq xo\'jaligi instituti, Toshkent',
+    es: 'Director, Instituto Agrícola, Tashkent'
   },
-  ib_died: { en: 'Died', ru: 'Дата смерти', uz: 'Vafot etgan sana' },
-  ib_died_val: { en: '21 May 1955 (aged 47–48)', ru: '21 мая 1955 (47–48 лет)', uz: '1955-yil 21-may (47–48 yoshda)' },
-  ib_degree: { en: 'Degree', ru: 'Учёная степень', uz: 'Ilmiy daraja' },
+  ib_died: { en: 'Died', ru: 'Дата смерти', uz: 'Vafot etgan sana', es: 'Fallecimiento' },
+  ib_died_val: { en: '21 May 1955 (aged 47–48)', ru: '21 мая 1955 (47–48 лет)', uz: '1955-yil 21-may (47–48 yoshda)', es: '21 de mayo de 1955 (47–48 años)' },
+  ib_degree: { en: 'Degree', ru: 'Учёная степень', uz: 'Ilmiy daraja', es: 'Grado académico' },
   ib_degree_val: {
     en: 'Candidate of Sciences (кандидат наук)',
     ru: 'Кандидат наук',
-    uz: 'Fanlar nomzodi (кандидат наук)'
+    uz: 'Fanlar nomzodi (кандидат наук)',
+    es: 'Candidato de Ciencias (кандидат наук)'
   },
-  ib_career: { en: 'Career path', ru: 'Карьерный путь', uz: 'Karera yo\'li' },
+  ib_career: { en: 'Career path', ru: 'Карьерный путь', uz: 'Karera yo\'li', es: 'Trayectoria profesional' },
   ib_career_val: {
     en: 'Agronomist → Researcher → Dept. Chair → Dean → Rector',
     ru: 'Агроном → Исследователь → Завкафедрой → Декан → Ректор',
-    uz: 'Agronom → Tadqiqotchi → Kafedra mudiri → Dekan → Rektor'
+    uz: 'Agronom → Tadqiqotchi → Kafedra mudiri → Dekan → Rektor',
+    es: 'Agrónomo → Investigador → Jefe de Dpto. → Decano → Rector'
   },
-  ib_known: { en: 'Known for', ru: 'Известен', uz: 'Mashhur' },
+  ib_known: { en: 'Known for', ru: 'Известен', uz: 'Mashhur', es: 'Conocido por' },
   ib_known_val: {
     en: 'Silkworm genetic fund conservation; academic leadership through scientific merit',
     ru: 'Сохранение генофонда тутового шелкопряда; академическое руководство через научные заслуги',
-    uz: 'Ipak qurti genofondini saqlash; ilmiy xizmatlar orqali akademik rahbarlik'
+    uz: 'Ipak qurti genofondini saqlash; ilmiy xizmatlar orqali akademik rahbarlik',
+    es: 'Conservación del fondo genético del gusano de seda; liderazgo académico por mérito científico'
   },
-  ib_wife: { en: 'Wife', ru: 'Жена', uz: 'Rafiqasi' },
-  ib_wife_val: { en: 'Habiba Bobojonova', ru: 'Хабиба Бобожонова', uz: 'Habiba Bobojonova' },
-  ib_children: { en: 'Children', ru: 'Дети', uz: 'Farzandlari' },
+  ib_wife: { en: 'Wife', ru: 'Жена', uz: 'Rafiqasi', es: 'Esposa' },
+  ib_wife_val: { en: 'Habiba Bobojonova', ru: 'Хабиба Бобожонова', uz: 'Habiba Bobojonova', es: 'Habiba Bobojonova' },
+  ib_children: { en: 'Children', ru: 'Дети', uz: 'Farzandlari', es: 'Hijos' },
   ib_children_val_html: {
     en: 'Seven daughters:<br>Elmira, Anila, Hursana,<br>Ravshana, Delya, Gulya, Mikhri',
     ru: 'Семь дочерей:<br>Эльмира, Анила, Хурсана,<br>Равшана, Деля, Гуля, Михри',
-    uz: 'Yetti qiz:<br>Elmira, Anila, Xursana,<br>Ravshana, Delya, Gulya, Mixri'
+    uz: 'Yetti qiz:<br>Elmira, Anila, Xursana,<br>Ravshana, Delya, Gulya, Mixri',
+    es: 'Siete hijas:<br>Elmira, Anila, Hursana,<br>Ravshana, Delya, Gulya, Mikhri'
   },
-  ib_region: { en: 'Region', ru: 'Регион', uz: 'Mintaqa' },
+  ib_region: { en: 'Region', ru: 'Регион', uz: 'Mintaqa', es: 'Región' },
   ib_region_val: {
     en: 'Turkestan Oblast',
     ru: 'Туркестанская область',
-    uz: 'Turkiston viloyati, '
+    uz: 'Turkiston viloyati, ',
+    es: 'Óblast de Turkestán'
   },
 
   // Footer
   footer_note_html: {
     en: 'Created by the descendants of <strong>Гулом</strong> and <strong>Хабиба Бобожонов</strong> — scholar and devoted mother, who together raised seven daughters and built a family that endures.<br><br><span style="font-size: 0.8rem; color: var(--text-muted);">Создана потомками Гулома и Хабибы Бобожоновых в честь их наследия.</span>',
     ru: 'Создана потомками <strong>Гулома</strong> и <strong>Хабибы Бобожоновых</strong> — учёного и преданной матери, которые вместе воспитали семерых дочерей и создали семью, которая живёт по сей день.<br><br><span style="font-size: 0.8rem; color: var(--text-muted);">Created by the descendants of Gulom and Habiba Bobojonov to honor their legacy.</span>',
-    uz: 'Bu sahifa <strong>Gulom</strong> va <strong>Habiba Bobojonov</strong>larning avlodlari tomonidan — olim va fidoiy ona, birga yetti qiz tarbiyalab, avlodlar bo\'ylab yashaydigan oila barpo etgan ota-onalar xotirasiga yaratilgan.<br><br><span style="font-size: 0.8rem; color: var(--text-muted);">Bobojonovlar / Umarovlar oilasi tomonidan avlodlar xotirasi uchun yaratilgan.</span>'
+    uz: 'Bu sahifa <strong>Gulom</strong> va <strong>Habiba Bobojonov</strong>larning avlodlari tomonidan — olim va fidoiy ona, birga yetti qiz tarbiyalab, avlodlar bo\'ylab yashaydigan oila barpo etgan ota-onalar xotirasiga yaratilgan.<br><br><span style="font-size: 0.8rem; color: var(--text-muted);">Bobojonovlar / Umarovlar oilasi tomonidan avlodlar xotirasi uchun yaratilgan.</span>',
+    es: 'Creada por los descendientes de <strong>Gulom</strong> y <strong>Habiba Bobojonov</strong> — científico y madre devota, que juntos criaron a siete hijas y construyeron una familia que perdura.<br><br><span style="font-size: 0.8rem; color: var(--text-muted);">Familia Bobojonov / Umarov — en memoria de sus ancestros.</span>'
   },
   footer_location: {
     en: 'Ikan · Turkestan',
     ru: 'Икан · Туркестан',
-    uz: 'Ikon · Turkiston · '
+    uz: 'Ikon · Turkiston · ',
+    es: 'Ikan · Turkestán'
   }
 };
 
