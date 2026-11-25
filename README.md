@@ -57,9 +57,10 @@ Gulom Bobojonov is the great-grandfather of the Umarov family. His line of scien
 **"The Mulberry Tree" / «Тутовое дерево»** (2026) — English 15:30, Russian 16:44 — plays in the `#film` section (first in the article, with a "Film" nav link and a "Watch the documentary" button in the hero). The Russian page plays the Russian film; the English, Uzbek and Spanish pages play the English film; the visitor can switch with the English / Русский buttons.
 
 - **Video files:** public Vercel Blob store `babadzhanov-films` (`store_cUew28aNCrwUREQS`, region fra1, connected to this project):
-  - `https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4`
-  - `https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4`
+  - `https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25b.mp4`
+  - `https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25b.mp4`
   - H.264 1920×1080 (CRF 21) + AAC 160 kb/s, fast start; 1-year cache.
+  - `…-2026-11-25b.mp4` = v3 (25 Nov 2026): the 1929 plate at 3:20 / 3:30 upright; Russian «Ика́на» at 4:50 re-voiced. The v2 files (`…-2026-11-25.mp4`) stay in the store, unreferenced.
 - **Posters and subtitles** are in `film/` (`poster-en.jpg`, `poster-ru.jpg`: the title card of each film; `.vtt` subtitles).
 - **Standalone watch pages, one per language:** [`/film/en`](https://www.gulam-babodjanov.com/film/en) and [`/film/ru`](https://www.gulam-babodjanov.com/film/ru) (`film/en/index.html`, `film/ru/index.html`, self-contained). `/film` redirects to `/film/ru` when the browser prefers Russian, otherwise to `/film/en` (`vercel.json`).
   - Clickable chapters and a clickable transcript (years and dates in digits; everything else as narrated) that move the player; the address bar follows, so any moment can be shared.

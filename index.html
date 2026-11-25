@@ -1069,7 +1069,7 @@ a:hover { color: var(--highlight); }
       "duration": "PT15M30S",
       "inLanguage": "en",
       "url": "https://www.gulam-babodjanov.com/film/en",
-      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4",
+      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25b.mp4",
       "about": { "@type": "Person", "name": "Gulam Babadjanov" }
     },
     {
@@ -1081,7 +1081,7 @@ a:hover { color: var(--highlight); }
       "duration": "PT16M44S",
       "inLanguage": "ru",
       "url": "https://www.gulam-babodjanov.com/film/ru",
-      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4",
+      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25b.mp4",
       "about": { "@type": "Person", "name": "Gulam Babadjanov" }
     }
   ]
@@ -1150,7 +1150,7 @@ a:hover { color: var(--highlight); }
 
       <div class="film-frame" id="filmFrame">
         <video id="filmVideo" controls preload="metadata" playsinline poster="film/poster-en.jpg">
-          <source src="https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4" type="video/mp4">
+          <source src="https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25b.mp4" type="video/mp4">
           <track kind="subtitles" src="film/the-mulberry-tree-en.vtt" srclang="en" label="English">
         </video>
         <button type="button" class="film-play" id="filmPlay" data-i18n-aria="film_play" aria-label="Play the film" hidden><span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 5.2v13.6L18.6 12z" fill="currentColor"/></svg></span></button>
@@ -1995,8 +1995,8 @@ function toggleTheme() {
 // To replace a film, upload it under a NEW dated pathname and update the URLs here and in the JSON-LD.
 (function() {
   const FILMS = {
-    en: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4', poster: 'film/poster-en.jpg', vtt: 'film/the-mulberry-tree-en.vtt', srclang: 'en', label: 'English' },
-    ru: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4', poster: 'film/poster-ru.jpg', vtt: 'film/the-mulberry-tree-ru.vtt', srclang: 'ru', label: 'Русский' }
+    en: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25b.mp4', poster: 'film/poster-en.jpg', vtt: 'film/the-mulberry-tree-en.vtt', srclang: 'en', label: 'English' },
+    ru: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25b.mp4', poster: 'film/poster-ru.jpg', vtt: 'film/the-mulberry-tree-ru.vtt', srclang: 'ru', label: 'Русский' }
   };
   const video = document.getElementById('filmVideo');
   const frame = document.getElementById('filmFrame');
