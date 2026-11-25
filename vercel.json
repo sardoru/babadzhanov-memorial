@@ -2,6 +2,8 @@
   "redirects": [
     { "source": "/film", "has": [{ "type": "header", "key": "accept-language", "value": "^ru.*" }], "destination": "/film/ru", "permanent": false },
     { "source": "/film/", "has": [{ "type": "header", "key": "accept-language", "value": "^ru.*" }], "destination": "/film/ru", "permanent": false },
+    { "source": "/film", "has": [{ "type": "header", "key": "accept-language", "value": "^uz.*" }], "destination": "/film/uz", "permanent": false },
+    { "source": "/film/", "has": [{ "type": "header", "key": "accept-language", "value": "^uz.*" }], "destination": "/film/uz", "permanent": false },
     { "source": "/film", "destination": "/film/en", "permanent": false },
     { "source": "/film/", "destination": "/film/en", "permanent": false }
   ]
