@@ -52,7 +52,25 @@ Gulom Bobojonov is the great-grandfather of the Umarov family. His line of scien
 - [Aminjan Niyazov](https://www.amin-niyazov.com) — First Secretary of CP Uzbekistan (1903–1973)
 - [Giyas Umarov](https://www.giyas-umarov.com) — Founder of Heliotechnology, Academician (1921–1988)
 
+## Documentary film
+
+**"The Mulberry Tree" / «Тутовое дерево»** (2026) — English 15:30, Russian 16:44 — plays in the `#film` section (first in the article, with a "Film" nav link and a "Watch the documentary" button in the hero). The Russian page plays the Russian film; the English, Uzbek and Spanish pages play the English film; the visitor can switch with the English / Русский buttons.
+
+- **Video files:** public Vercel Blob store `babadzhanov-films` (`store_cUew28aNCrwUREQS`, region fra1, connected to this project):
+  - `https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4`
+  - `https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4`
+  - H.264 1920×1080 (CRF 21) + AAC 160 kb/s, fast start; 1-year cache.
+- **Posters and subtitles** are in `film/` (`poster-en.jpg`, `poster-ru.jpg`: the title card of each film; `.vtt` subtitles).
+- **To replace a film:** upload the new file under a **new dated pathname** (the old URL is cached for a year), then update the URLs in `index.html` — the `FILMS` table in the script, the `<source>` in the `#film` section and the JSON-LD `VideoObject`s — and the durations in the labels (`hero_watch`, the switch buttons, JSON-LD `duration`).
+  ```bash
+  vercel env pull .env.local          # in a scratch folder linked to this project, NOT in the repo
+  vercel blob put film.mp4 --pathname films/the-mulberry-tree-en-YYYY-MM-DD.mp4 --cache-control-max-age 31536000 --content-type video/mp4
+  rm .env.local
+  ```
+
 ## Deploy
+
+Pushing to `main` deploys production (Vercel Git integration). Manual deploy:
 
 ```bash
 npx vercel --prod
