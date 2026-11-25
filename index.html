@@ -972,6 +972,9 @@ a:hover { color: var(--highlight); }
 .film-lang-btn:focus-visible { outline: 2px solid var(--highlight); outline-offset: 2px; }
 .film-dur { white-space: nowrap; opacity: 0.85; }
 .film-note { margin: 0.85rem 0 0; font-size: 0.9rem; color: var(--text-muted); }
+.film-page { margin: 0.6rem 0 0; font-size: 0.95rem; }
+.film-page a { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+.film-page a:hover { color: var(--highlight); }
 
 /* small players: a smaller disc, lower down, so it stays clear of the title card's subtitle line */
 @media (max-width: 640px) {
@@ -1065,6 +1068,7 @@ a:hover { color: var(--highlight); }
       "uploadDate": "2026-11-25",
       "duration": "PT15M30S",
       "inLanguage": "en",
+      "url": "https://www.gulam-babodjanov.com/film/en",
       "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4",
       "about": { "@type": "Person", "name": "Gulam Babadjanov" }
     },
@@ -1076,6 +1080,7 @@ a:hover { color: var(--highlight); }
       "uploadDate": "2026-11-25",
       "duration": "PT16M44S",
       "inLanguage": "ru",
+      "url": "https://www.gulam-babodjanov.com/film/ru",
       "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4",
       "about": { "@type": "Person", "name": "Gulam Babadjanov" }
     }
@@ -1156,6 +1161,7 @@ a:hover { color: var(--highlight); }
         <button type="button" class="film-lang-btn" data-film="ru" aria-pressed="false">Русский<span class="film-dur"><span class="film-sep"> · </span>17 мин</span></button>
       </div>
       <p class="film-note" data-i18n="film_note">Choose the language of the film above. Subtitles can be turned on in the player.</p>
+      <p class="film-page"><a id="filmPageLink" href="/film/en" data-i18n="film_page_link">Chapters, transcript and a link to share →</a></p>
     </section>
 
     <!-- Biography -->
@@ -1521,6 +1527,7 @@ const T = {
   },
   film_play: { en: 'Play the film', ru: 'Смотреть фильм', uz: 'Filmni ko\'rish', es: 'Reproducir la película' },
   film_lang: { en: 'Film language', ru: 'Язык фильма', uz: 'Film tili', es: 'Idioma de la película' },
+  film_page_link: { en: 'Chapters, transcript and a link to share →', ru: 'Главы, текст фильма и ссылка, чтобы поделиться →', uz: 'Boblar, film matni va ulashish uchun havola →', es: 'Capítulos, transcripción y enlace para compartir →' },
 
   // Hero
   hero_dates: { en: 'Ikan · Turkestan', ru: 'Икан · Туркестан', uz: 'Ikon · Turkiston · ', es: 'Ikán · Turkestán' },
@@ -1958,8 +1965,11 @@ function setLang(lang) {
   if (window.syncFilm) window.syncFilm(lang);
 }
 
-// Restore language
+// Restore language: ?lang=ru|uz|es|en in the address wins (shareable per-language links), then the saved choice
 (function() {
+  let q = null;
+  try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (q && T.nav_home[q]) { setLang(q); return; }
   const saved = localStorage.getItem('lang');
   if (saved && saved !== 'en') setLang(saved);
 })();
@@ -2019,6 +2029,8 @@ function toggleTheme() {
     current = code;
     frame.classList.remove('is-playing');
     if (playBtn) video.controls = false;
+    const pageLink = document.getElementById('filmPageLink');
+    if (pageLink) pageLink.href = '/film/' + code;
     document.querySelectorAll('.film-lang-btn').forEach(b => {
       const on = b.dataset.film === code;
       b.classList.toggle('active', on);
