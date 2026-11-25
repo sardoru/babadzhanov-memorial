@@ -840,6 +840,160 @@ a:hover { color: var(--highlight); }
   .articles { padding: 0 0.5rem; }
   .compare-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== DOCUMENTARY FILM ===== */
+/* keep section headings clear of the fixed nav bar after an anchor jump */
+.section { scroll-margin-top: 3.75rem; }
+
+.hero-watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 0.45rem 1.25rem 0.45rem 0.45rem;
+  border: 1px solid rgba(232, 212, 139, 0.55);
+  border-radius: 999px;
+  background: rgba(26, 14, 26, 0.35);
+  color: var(--cream);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.hero-watch .disc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--mulberry-black);
+  flex: none;
+}
+.hero-watch .disc svg { width: 0.95rem; height: 0.95rem; margin-left: 0.15rem; }
+.hero-watch:hover,
+.hero-watch:focus-visible {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--mulberry-black);
+}
+.hero-watch:hover .disc,
+.hero-watch:focus-visible .disc { background: var(--mulberry-black); color: var(--gold-light); }
+.hero-watch:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+
+.film-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--highlight);
+  margin-bottom: 0.35rem;
+}
+.film-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 1.5rem 0 1.1rem;
+  background: #000;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.film-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.film-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0 8%;
+  border: 0;
+  background: linear-gradient(180deg, rgba(26, 14, 26, 0) 50%, rgba(26, 14, 26, 0.4));
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.film-play .disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(56px, 8vw, 84px);
+  height: clamp(56px, 8vw, 84px);
+  border: 2px solid var(--gold-light);
+  border-radius: 50%;
+  background: rgba(26, 14, 26, 0.45);
+  color: var(--gold-light);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+.film-play .disc svg { width: 34%; height: 34%; margin-left: 6%; }
+.film-play:hover .disc,
+.film-play:focus-visible .disc {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--mulberry-black);
+  transform: scale(1.05);
+}
+.film-play:focus-visible { outline: 2px solid var(--gold-light); outline-offset: -4px; }
+.film-frame.is-playing .film-play {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+.film-switch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg-card);
+}
+.film-lang-btn {
+  min-height: 44px;
+  padding: 0.5rem 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.film-lang-btn:hover { color: var(--accent); }
+.film-lang-btn.active { background: var(--purple-deep); color: var(--cream); font-weight: 600; }
+[data-theme="dark"] .film-lang-btn.active { background: var(--gold); color: var(--mulberry-black); }
+.film-lang-btn:focus-visible { outline: 2px solid var(--highlight); outline-offset: 2px; }
+.film-dur { white-space: nowrap; opacity: 0.85; }
+.film-note { margin: 0.85rem 0 0; font-size: 0.9rem; color: var(--text-muted); }
+
+/* small players: a smaller disc, lower down, so it stays clear of the title card's subtitle line */
+@media (max-width: 640px) {
+  .film-play { padding-bottom: 4.5%; }
+  .film-play .disc { width: 46px; height: 46px; border-width: 1.5px; }
+}
+
+@media (max-width: 520px) {
+  .film-switch { display: flex; width: 100%; }
+  .film-lang-btn { flex: 1; padding: 0.45rem 0.4rem; line-height: 1.25; }
+  .film-lang-btn .film-dur { display: block; font-size: 0.84em; }
+  .film-lang-btn .film-sep { display: none; }
+  .hero-watch { font-size: 0.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-play, .film-play .disc, .hero-watch { transition: none; }
+}
+
+@media print {
+  .film-frame, .film-switch, .film-note, .hero-watch { display: none !important; }
+}
 </style>
 <!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
@@ -899,6 +1053,36 @@ a:hover { color: var(--highlight); }
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoObject",
+      "name": "The Mulberry Tree",
+      "description": "A documentary film about the life of Gulam Babadjanov (1907–1955), from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents.",
+      "thumbnailUrl": "https://www.gulam-babodjanov.com/film/poster-en.jpg",
+      "uploadDate": "2026-11-25",
+      "duration": "PT15M30S",
+      "inLanguage": "en",
+      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4",
+      "about": { "@type": "Person", "name": "Gulam Babadjanov" }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Тутовое дерево",
+      "description": "Документальный фильм о жизни Гуляма Бабаджанова (1907–1955): от села Икан под Туркестаном до Ташкентского сельскохозяйственного института, и о шелковице, на которой держался узбекский шёлк. Семейные фотографии и архивные документы.",
+      "thumbnailUrl": "https://www.gulam-babodjanov.com/film/poster-ru.jpg",
+      "uploadDate": "2026-11-25",
+      "duration": "PT16M44S",
+      "inLanguage": "ru",
+      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4",
+      "about": { "@type": "Person", "name": "Gulam Babadjanov" }
+    }
+  ]
+}
+</script>
+
 <!-- Vercel Analytics -->
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
@@ -909,6 +1093,7 @@ a:hover { color: var(--highlight); }
 <nav class="nav-bar">
   <div class="nav-links">
     <a href="#hero" data-i18n="nav_home">Home</a>
+    <a href="#film" data-i18n="nav_film">Film</a>
     <a href="#biography" data-i18n="nav_bio">Biography</a>
     <a href="#legacy" data-i18n="nav_legacy">Legacy</a>
     <a href="#ikan" data-i18n="nav_ikan">Ikan</a>
@@ -940,6 +1125,7 @@ a:hover { color: var(--highlight); }
       Scholar. Scientist of Silk. Rector of the Tashkent Agricultural Institute. Father of Seven.<br>
       <em>From a peasant village to the rector's chair — built on knowledge, not connections</em>
     </div>
+    <a class="hero-watch" href="#film" id="heroWatch"><span class="disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.5 5.2v13.6L18.6 12z" fill="currentColor"/></svg></span><span data-i18n="hero_watch">Watch the documentary · 16 min</span></a>
   </div>
   <div class="scroll-hint">↓</div>
 </header>
@@ -949,6 +1135,28 @@ a:hover { color: var(--highlight); }
 
   <!-- Articles Column -->
   <div class="articles">
+
+    <!-- Documentary film -->
+    <section class="section fade-in" id="film" aria-labelledby="filmTitle">
+      <p class="film-kicker" data-i18n="film_kicker">Documentary · 2026</p>
+      <h2 class="section-header" id="filmTitle" data-i18n="film_title">The Mulberry Tree</h2>
+
+      <p data-i18n="film_p">A documentary film about the life of Gulam Babadjanov (1907–1955) — from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents. Available in English and Russian.</p>
+
+      <div class="film-frame" id="filmFrame">
+        <video id="filmVideo" controls preload="metadata" playsinline poster="film/poster-en.jpg">
+          <source src="https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4" type="video/mp4">
+          <track kind="subtitles" src="film/the-mulberry-tree-en.vtt" srclang="en" label="English">
+        </video>
+        <button type="button" class="film-play" id="filmPlay" data-i18n-aria="film_play" aria-label="Play the film" hidden><span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 5.2v13.6L18.6 12z" fill="currentColor"/></svg></span></button>
+      </div>
+
+      <div class="film-switch" role="group" data-i18n-aria="film_lang" aria-label="Film language">
+        <button type="button" class="film-lang-btn active" data-film="en" aria-pressed="true">English<span class="film-dur"><span class="film-sep"> · </span>16 min</span></button>
+        <button type="button" class="film-lang-btn" data-film="ru" aria-pressed="false">Русский<span class="film-dur"><span class="film-sep"> · </span>17 мин</span></button>
+      </div>
+      <p class="film-note" data-i18n="film_note">Choose the language of the film above. Subtitles can be turned on in the player.</p>
+    </section>
 
     <!-- Biography -->
     <section class="section fade-in" id="biography">
@@ -1293,6 +1501,26 @@ const T = {
   nav_compare: { en: 'Then & Now', ru: 'Тогда и сейчас', uz: 'O\'sha va hozir', es: 'Antes y ahora' },
   nav_gallery: { en: 'Gallery', ru: 'Галерея', uz: 'Galereya', es: 'Galería' },
   nav_family: { en: 'Family', ru: 'Семья', uz: 'Oila', es: 'Familia' },
+  nav_film: { en: 'Film', ru: 'Фильм', uz: 'Film', es: 'Película' },
+
+  // Documentary film
+  hero_watch: { en: 'Watch the documentary · 16 min', ru: 'Смотреть фильм · 17 мин', uz: 'Filmni ko\'rish · 16 daqiqa', es: 'Ver el documental · 16 min' },
+  film_kicker: { en: 'Documentary · 2026', ru: 'Документальный фильм · 2026', uz: 'Hujjatli film · 2026', es: 'Documental · 2026' },
+  film_title: { en: 'The Mulberry Tree', ru: 'Тутовое дерево', uz: 'Tut daraxti', es: 'La morera' },
+  film_p: {
+    en: 'A documentary film about the life of Gulam Babadjanov (1907–1955) — from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents. Available in English and Russian.',
+    ru: 'Документальный фильм о жизни Гуляма Бабаджанова (1907–1955) — от села Икан под Туркестаном до Ташкентского сельскохозяйственного института — и о шелковице, на которой держался узбекский шёлк. Семейные фотографии и архивные документы. Фильм на русском и английском языках.',
+    uz: 'Gulam Babadjanov (1907–1955) haqida hujjatli film: Turkiston yaqinidagi Ikon qishlog\'idan Toshkent qishloq xo\'jalik institutigacha bosib o\'tgan yo\'li va o\'zbek ipakchiligining asosi — tut daraxti haqida hikoya. Film oilaviy suratlar va arxiv hujjatlari asosida yaratilgan. Ingliz va rus tillarida.',
+    es: 'Un documental sobre la vida de Gulam Babadjanov (1907–1955): de la aldea de Ikán, cerca de Turkestán, al Instituto Agrícola de Taskent, y sobre la morera, el árbol del que dependía la seda de Uzbekistán. Contado con fotografías familiares y documentos de archivo. Disponible en inglés y en ruso.'
+  },
+  film_note: {
+    en: 'Choose the language of the film above. Subtitles can be turned on in the player.',
+    ru: 'Выберите язык фильма выше. Субтитры можно включить в плеере.',
+    uz: 'Film tilini yuqorida tanlang. Subtitrlarni pleyerda yoqish mumkin.',
+    es: 'Elija arriba el idioma de la película. Los subtítulos se pueden activar en el reproductor.'
+  },
+  film_play: { en: 'Play the film', ru: 'Смотреть фильм', uz: 'Filmni ko\'rish', es: 'Reproducir la película' },
+  film_lang: { en: 'Film language', ru: 'Язык фильма', uz: 'Film tili', es: 'Idioma de la película' },
 
   // Hero
   hero_dates: { en: 'Ikan · Turkestan', ru: 'Икан · Туркестан', uz: 'Ikon · Turkiston · ', es: 'Ikán · Turkestán' },
@@ -1721,8 +1949,13 @@ function setLang(lang) {
   document.querySelectorAll('.lang-switcher button').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const entry = T[el.getAttribute('data-i18n-aria')];
+    if (entry && entry[lang]) el.setAttribute('aria-label', entry[lang]);
+  });
   document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
+  if (window.syncFilm) window.syncFilm(lang);
 }
 
 // Restore language
@@ -1745,6 +1978,74 @@ function toggleTheme() {
   if (saved) document.documentElement.setAttribute('data-theme', saved);
   else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
     document.documentElement.setAttribute('data-theme', 'dark');
+})();
+
+// ===== DOCUMENTARY FILM =====
+// The films live in the public Vercel Blob store "babadzhanov-films" (connected to this project).
+// To replace a film, upload it under a NEW dated pathname and update the URLs here and in the JSON-LD.
+(function() {
+  const FILMS = {
+    en: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25.mp4', poster: 'film/poster-en.jpg', vtt: 'film/the-mulberry-tree-en.vtt', srclang: 'en', label: 'English' },
+    ru: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25.mp4', poster: 'film/poster-ru.jpg', vtt: 'film/the-mulberry-tree-ru.vtt', srclang: 'ru', label: 'Русский' }
+  };
+  const video = document.getElementById('filmVideo');
+  const frame = document.getElementById('filmFrame');
+  const playBtn = document.getElementById('filmPlay');
+  if (!video || !frame) return;
+  let current = 'en';
+  let chosen = false;   // true once the visitor picks a film language themselves
+
+  if (playBtn) { video.controls = false; playBtn.hidden = false; }
+
+  function startFilm() {
+    video.controls = true;
+    const p = video.play();
+    if (p && p.catch) p.catch(() => {});
+  }
+
+  function setFilm(code) {
+    const f = FILMS[code];
+    if (!f || code === current) return;
+    video.pause();
+    video.querySelectorAll('source, track').forEach(n => n.remove());
+    const source = document.createElement('source');
+    source.src = f.src; source.type = 'video/mp4';
+    video.appendChild(source);
+    const track = document.createElement('track');
+    track.kind = 'subtitles'; track.src = f.vtt; track.srclang = f.srclang; track.label = f.label;
+    video.appendChild(track);
+    video.poster = f.poster;
+    video.load();
+    current = code;
+    frame.classList.remove('is-playing');
+    if (playBtn) video.controls = false;
+    document.querySelectorAll('.film-lang-btn').forEach(b => {
+      const on = b.dataset.film === code;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  // The Russian page plays the Russian film; every other language plays the English one,
+  // unless the visitor has chosen a film or has already started watching.
+  window.syncFilm = function(lang) {
+    if (!chosen && video.paused && video.currentTime < 1) setFilm(lang === 'ru' ? 'ru' : 'en');
+  };
+
+  document.querySelectorAll('.film-lang-btn').forEach(b => b.addEventListener('click', () => { chosen = true; setFilm(b.dataset.film); }));
+  if (playBtn) playBtn.addEventListener('click', startFilm);
+  video.addEventListener('play', () => { frame.classList.add('is-playing'); video.controls = true; });
+
+  const heroWatch = document.getElementById('heroWatch');
+  if (heroWatch) heroWatch.addEventListener('click', e => {
+    e.preventDefault();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById('film').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', '#film');
+    startFilm();
+  });
+
+  window.syncFilm(document.documentElement.lang || 'en');
 })();
 
 // Fade-in: trigger on scroll OR after page load
