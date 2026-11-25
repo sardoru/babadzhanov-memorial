@@ -1083,6 +1083,18 @@ a:hover { color: var(--highlight); }
       "url": "https://www.gulam-babodjanov.com/film/ru",
       "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25b.mp4",
       "about": { "@type": "Person", "name": "Gulam Babadjanov" }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Tut daraxti",
+      "description": "Gʻulom Bobojonov (1907–1955) hayoti haqida hujjatli film: Turkiston yaqinidagi Iqon qishlogʻidan Toshkent qishloq xoʻjalik institutigacha bosib oʻtgan yoʻli va oʻzbek ipakchiligining asosi — tut daraxti haqida hikoya. Oilaviy suratlar va arxiv hujjatlari asosida.",
+      "thumbnailUrl": "https://www.gulam-babodjanov.com/film/poster-uz.jpg",
+      "uploadDate": "2026-11-25",
+      "duration": "PT17M44S",
+      "inLanguage": "uz",
+      "url": "https://www.gulam-babodjanov.com/film/uz",
+      "contentUrl": "https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-uz-2026-11-25.mp4",
+      "about": { "@type": "Person", "name": "Gulam Babadjanov" }
     }
   ]
 }
@@ -1146,7 +1158,7 @@ a:hover { color: var(--highlight); }
       <p class="film-kicker" data-i18n="film_kicker">Documentary · 2026</p>
       <h2 class="section-header" id="filmTitle" data-i18n="film_title">The Mulberry Tree</h2>
 
-      <p data-i18n="film_p">A documentary film about the life of Gulam Babadjanov (1907–1955) — from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents. Available in English and Russian.</p>
+      <p data-i18n="film_p">A documentary film about the life of Gulam Babadjanov (1907–1955) — from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents. Available in English, Russian and Uzbek.</p>
 
       <div class="film-frame" id="filmFrame">
         <video id="filmVideo" controls preload="metadata" playsinline poster="film/poster-en.jpg">
@@ -1159,6 +1171,7 @@ a:hover { color: var(--highlight); }
       <div class="film-switch" role="group" data-i18n-aria="film_lang" aria-label="Film language">
         <button type="button" class="film-lang-btn active" data-film="en" aria-pressed="true">English<span class="film-dur"><span class="film-sep"> · </span>16 min</span></button>
         <button type="button" class="film-lang-btn" data-film="ru" aria-pressed="false">Русский<span class="film-dur"><span class="film-sep"> · </span>17 мин</span></button>
+        <button type="button" class="film-lang-btn" data-film="uz" aria-pressed="false">Oʻzbekcha<span class="film-dur"><span class="film-sep"> · </span>18 daqiqa</span></button>
       </div>
       <p class="film-note" data-i18n="film_note">Choose the language of the film above. Subtitles can be turned on in the player.</p>
       <p class="film-page"><a id="filmPageLink" href="/film/en" data-i18n="film_page_link">Chapters, transcript and a link to share →</a></p>
@@ -1510,14 +1523,14 @@ const T = {
   nav_film: { en: 'Film', ru: 'Фильм', uz: 'Film', es: 'Película' },
 
   // Documentary film
-  hero_watch: { en: 'Watch the documentary · 16 min', ru: 'Смотреть фильм · 17 мин', uz: 'Filmni ko\'rish · 16 daqiqa', es: 'Ver el documental · 16 min' },
+  hero_watch: { en: 'Watch the documentary · 16 min', ru: 'Смотреть фильм · 17 мин', uz: 'Filmni ko\'rish · 18 daqiqa', es: 'Ver el documental · 16 min' },
   film_kicker: { en: 'Documentary · 2026', ru: 'Документальный фильм · 2026', uz: 'Hujjatli film · 2026', es: 'Documental · 2026' },
   film_title: { en: 'The Mulberry Tree', ru: 'Тутовое дерево', uz: 'Tut daraxti', es: 'La morera' },
   film_p: {
-    en: 'A documentary film about the life of Gulam Babadjanov (1907–1955) — from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents. Available in English and Russian.',
-    ru: 'Документальный фильм о жизни Гуляма Бабаджанова (1907–1955) — от села Икан под Туркестаном до Ташкентского сельскохозяйственного института — и о шелковице, на которой держался узбекский шёлк. Семейные фотографии и архивные документы. Фильм на русском и английском языках.',
-    uz: 'Gulam Babadjanov (1907–1955) haqida hujjatli film: Turkiston yaqinidagi Ikon qishlog\'idan Toshkent qishloq xo\'jalik institutigacha bosib o\'tgan yo\'li va o\'zbek ipakchiligining asosi — tut daraxti haqida hikoya. Film oilaviy suratlar va arxiv hujjatlari asosida yaratilgan. Ingliz va rus tillarida.',
-    es: 'Un documental sobre la vida de Gulam Babadjanov (1907–1955): de la aldea de Ikán, cerca de Turkestán, al Instituto Agrícola de Taskent, y sobre la morera, el árbol del que dependía la seda de Uzbekistán. Contado con fotografías familiares y documentos de archivo. Disponible en inglés y en ruso.'
+    en: 'A documentary film about the life of Gulam Babadjanov (1907–1955) — from the village of Ikan near Turkestan to the Tashkent Agricultural Institute, and the mulberry tree on which the silk of Uzbekistan depended. Told through family photographs and archival documents. Available in English, Russian and Uzbek.',
+    ru: 'Документальный фильм о жизни Гуляма Бабаджанова (1907–1955) — от села Икан под Туркестаном до Ташкентского сельскохозяйственного института — и о шелковице, на которой держался узбекский шёлк. Семейные фотографии и архивные документы. Фильм на русском, английском и узбекском языках.',
+    uz: 'Gulam Babadjanov (1907–1955) haqida hujjatli film: Turkiston yaqinidagi Ikon qishlog\'idan Toshkent qishloq xo\'jalik institutigacha bosib o\'tgan yo\'li va o\'zbek ipakchiligining asosi — tut daraxti haqida hikoya. Film oilaviy suratlar va arxiv hujjatlari asosida yaratilgan. O\'zbek, ingliz va rus tillarida.',
+    es: 'Un documental sobre la vida de Gulam Babadjanov (1907–1955): de la aldea de Ikán, cerca de Turkestán, al Instituto Agrícola de Taskent, y sobre la morera, el árbol del que dependía la seda de Uzbekistán. Contado con fotografías familiares y documentos de archivo. Disponible en inglés, ruso y uzbeko.'
   },
   film_note: {
     en: 'Choose the language of the film above. Subtitles can be turned on in the player.',
@@ -1996,7 +2009,8 @@ function toggleTheme() {
 (function() {
   const FILMS = {
     en: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-en-2026-11-25b.mp4', poster: 'film/poster-en.jpg', vtt: 'film/the-mulberry-tree-en.vtt', srclang: 'en', label: 'English' },
-    ru: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25b.mp4', poster: 'film/poster-ru.jpg', vtt: 'film/the-mulberry-tree-ru.vtt', srclang: 'ru', label: 'Русский' }
+    ru: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-ru-2026-11-25b.mp4', poster: 'film/poster-ru.jpg', vtt: 'film/the-mulberry-tree-ru.vtt', srclang: 'ru', label: 'Русский' },
+    uz: { src: 'https://cuew28ancrwureqs.public.blob.vercel-storage.com/films/the-mulberry-tree-uz-2026-11-25.mp4', poster: 'film/poster-uz.jpg', vtt: 'film/the-mulberry-tree-uz.vtt', srclang: 'uz', label: 'Oʻzbekcha' }
   };
   const video = document.getElementById('filmVideo');
   const frame = document.getElementById('filmFrame');
@@ -2038,10 +2052,10 @@ function toggleTheme() {
     });
   }
 
-  // The Russian page plays the Russian film; every other language plays the English one,
+  // The Russian page plays the Russian film, the Uzbek page the Uzbek film; English and Spanish play the English one,
   // unless the visitor has chosen a film or has already started watching.
   window.syncFilm = function(lang) {
-    if (!chosen && video.paused && video.currentTime < 1) setFilm(lang === 'ru' ? 'ru' : 'en');
+    if (!chosen && video.paused && video.currentTime < 1) setFilm(lang === 'ru' ? 'ru' : (lang === 'uz' ? 'uz' : 'en'));
   };
 
   document.querySelectorAll('.film-lang-btn').forEach(b => b.addEventListener('click', () => { chosen = true; setFilm(b.dataset.film); }));
